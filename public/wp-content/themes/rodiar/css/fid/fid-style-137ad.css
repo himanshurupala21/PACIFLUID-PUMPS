@@ -1,0 +1,48 @@
+/*=== designervily-ele-fid-style-1 ===*/
+.designervily-ele-fid-style-1 {
+	position: relative;
+}
+.designervily-ele-fid-style-1 .dsvy-fld-wrap {
+    display: flex;
+    padding-left: 65px;
+}
+.designervily-ele-fid-style-1 .dsvy-fid-contents {
+    padding-left: 30px;
+}
+.designervily-ele-fid-style-1 .dsvy-fid-title{
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    color: var(--dsvy-rodiar-blackish-color);
+}
+.designervily-ele-fid-style-1 .dsvy-fld-wrap .dsvy-fid-inner{
+    font-size: 60px;
+    line-height: 75px;
+    font-weight: 700;
+    color: var(--dsvy-rodiar-blackish-color);
+}
+.designervily-ele-fid-style-1 .dsvy-fid-inner span:after {
+    content: attr(data-to);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    font-size: 150px;
+    line-height: 150px;
+    opacity: 0.7;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(12, 27, 51, 0.30);
+    -webkit-transform: translateY(-30%);
+    -ms-transform: translateY(-30%);
+    -moz-transform: translateY(-30%);
+    transform: translateY(-30%);
+}
+.designervily-ele-fid-style-1 .dsvy-heading-desc {
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.designervily-ele-fid-style-1 .dsvy-sbox-icon-wrapper {
+    display: none;
+}

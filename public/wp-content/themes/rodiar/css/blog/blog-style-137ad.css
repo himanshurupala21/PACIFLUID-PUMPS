@@ -1,0 +1,83 @@
+/*=== dsvy-blogbox-style-1 ===*/ 
+.dsvy-blog-style-1 .designervily-box-content{
+    padding: 40px 20px;
+    background: #fff;
+    border:1px solid #e8e8e9;
+    border-bottom: 3px solid var(--dsvy-rodiar-global-color);
+}
+.dsvy-blog-style-1 .designervily-box-content .dsvy-post-title{
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 30px; 
+}
+.dsvy-blog-style-1 .dsvy-meta-date-wrapper{
+    display: inline-block;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.dsvy-blog-style-1 .dsvy-meta-container {
+    font-size: 13px;
+    line-height: 20px;
+    color: #808080;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;    
+}
+.dsvy-blog-style-1 .dsvy-meta-line a{
+    font-size: 13px;
+    color: #808080;
+}
+.dsvy-blog-style-1 .dsvy-meta-line a:hover,
+.dsvy-blog-style-1 .dsvy-meta-date-wrapper:hover {
+    color: var(--dsvy-rodiar-global-color);
+}
+.dsvy-blog-style-1 .dsvy-meta-line {
+    margin: 0 0 0 10px;
+    padding-left: 30px;
+    position: relative;
+}
+.dsvy-blog-style-1 .dsvy-meta-line:before {
+    position: absolute;
+    content: "";
+    top: 7px;
+    left: 0;
+    width: 22px;
+    height: 1px;
+    background-color: #808080;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.dsvy-blog-style-1 .dsvy-meta-line:hover::before{
+    background-color: var(--dsvy-rodiar-global-color);
+}
+.dsvy-blog-style-1 .dsvy-featured-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.dsvy-blog-style-1 .dsvy-featured-wrapper img {
+    position: relative;
+    width: 100%;
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.dsvy-blog-style-1:hover .dsvy-featured-wrapper img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.dsvy-blog-style-1 .dsvy-post-title a:hover{
+    color: var(--dsvy-rodiar-global-color);
+}
+.dsvy-blog-style-1 .dsvy-service-btn a:hover{
+    color: var(--dsvy-rodiar-global-color);
+}
+.dsvy-element-blog-style-1.designervily-element-viewtype-carousel .dsvy-carousel-navs {
+    top: calc(65% - 15px);
+    left: 15px;
+}
+.dsvy-element-blog-style-1 .dsvy-heading-subheading .dsvy-element-subtitle{
+    margin-top: 10px;
+}

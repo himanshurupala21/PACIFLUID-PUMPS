@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?84e3550aa67a30bdbc2ce59efc38b8f8") format("truetype"),
+url("./flaticon.woff?84e3550aa67a30bdbc2ce59efc38b8f8") format("woff"),
+url("./flaticon.woff2?84e3550aa67a30bdbc2ce59efc38b8f8") format("woff2"),
+url("./flaticon.eot?84e3550aa67a30bdbc2ce59efc38b8f8#iefix") format("embedded-opentype"),
+url("./flaticon.svg?84e3550aa67a30bdbc2ce59efc38b8f8#flaticon") format("svg");
+}
+
+i[class^="dsvy-rodiar-icon-"]:before, i[class*=" dsvy-rodiar-icon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+}
+
+.dsvy-rodiar-icon-equestrian:before {
+    content: "\f101";
+}
+.dsvy-rodiar-icon-horse:before {
+    content: "\f102";
+}
+.dsvy-rodiar-icon-trophy:before {
+    content: "\f103";
+}
+.dsvy-rodiar-icon-jockey:before {
+    content: "\f104";
+}
+.dsvy-rodiar-icon-horse-jump:before {
+    content: "\f105";
+}
+.dsvy-rodiar-icon-stable:before {
+    content: "\f106";
+}
+.dsvy-rodiar-icon-park:before {
+    content: "\f107";
+}
+.dsvy-rodiar-icon-medal:before {
+    content: "\f108";
+}
+.dsvy-rodiar-icon-horseshoe:before {
+    content: "\f109";
+}
+.dsvy-rodiar-icon-helmet:before {
+    content: "\f10a";
+}
+.dsvy-rodiar-icon-bag:before {
+    content: "\f10b";
+}
+.dsvy-rodiar-icon-fountain:before {
+    content: "\f10c";
+}
+.dsvy-rodiar-icon-horse-saddle:before {
+    content: "\f10d";
+}
+.dsvy-rodiar-icon-stable-1:before {
+    content: "\f10e";
+}
+.dsvy-rodiar-icon-fountain-1:before {
+    content: "\f10f";
+}
+.dsvy-rodiar-icon-horse-riding:before {
+    content: "\f110";
+}
+.dsvy-rodiar-icon-boots:before {
+    content: "\f111";
+}
+.dsvy-rodiar-icon-badge:before {
+    content: "\f112";
+}
+.dsvy-rodiar-icon-jockey-1:before {
+    content: "\f113";
+}
+.dsvy-rodiar-icon-cycling:before {
+    content: "\f114";
+}
+.dsvy-rodiar-icon-map:before {
+    content: "\f115";
+}
+.dsvy-rodiar-icon-helmet-1:before {
+    content: "\f116";
+}
+.dsvy-rodiar-icon-skins:before {
+    content: "\f117";
+}
+.dsvy-rodiar-icon-pump:before {
+    content: "\f118";
+}
+.dsvy-rodiar-icon-bike-path:before {
+    content: "\f119";
+}
+.dsvy-rodiar-icon-bike-path-1:before {
+    content: "\f11a";
+}
+.dsvy-rodiar-icon-cycling-1:before {
+    content: "\f11b";
+}
+.dsvy-rodiar-icon-drink-bottle:before {
+    content: "\f11c";
+}
+.dsvy-rodiar-icon-tools:before {
+    content: "\f11d";
+}
+.dsvy-rodiar-icon-helmet-2:before {
+    content: "\f11e";
+}
+.dsvy-rodiar-icon-flags:before {
+    content: "\f11f";
+}
+.dsvy-rodiar-icon-maintenance:before {
+    content: "\f120";
+}
+.dsvy-rodiar-icon-wheels:before {
+    content: "\f121";
+}
+.dsvy-rodiar-icon-license:before {
+    content: "\f122";
+}
+.dsvy-rodiar-icon-bike:before {
+    content: "\f123";
+}
+.dsvy-rodiar-icon-wheel:before {
+    content: "\f124";
+}
+.dsvy-rodiar-icon-medal-1:before {
+    content: "\f125";
+}
+.dsvy-rodiar-icon-helmet-3:before {
+    content: "\f126";
+}
+.dsvy-rodiar-icon-meter:before {
+    content: "\f127";
+}
+.dsvy-rodiar-icon-piston:before {
+    content: "\f128";
+}
+.dsvy-rodiar-icon-bullet:before {
+    content: "\f129";
+}
+.dsvy-rodiar-icon-pistons:before {
+    content: "\f12a";
+}
+.dsvy-rodiar-icon-spark:before {
+    content: "\f12b";
+}
+.dsvy-rodiar-icon-bike-1:before {
+    content: "\f12c";
+}
+.dsvy-rodiar-icon-scooter:before {
+    content: "\f12d";
+}
+.dsvy-rodiar-icon-oil:before {
+    content: "\f12e";
+}
+.dsvy-rodiar-icon-screw-driver:before {
+    content: "\f12f";
+}
+.dsvy-rodiar-icon-petrol-station:before {
+    content: "\f130";
+}
+.dsvy-rodiar-icon-shock:before {
+    content: "\f131";
+}
+.dsvy-rodiar-icon-right-arrow:before {
+    content: "\f132";
+}
+.dsvy-rodiar-icon-right-arrow-1:before {
+    content: "\f133";
+}
+.dsvy-rodiar-icon-pdf-file:before {
+    content: "\f134";
+}
+.dsvy-rodiar-icon-doc-file:before {
+    content: "\f135";
+}
+.dsvy-rodiar-icon-phone-call:before {
+    content: "\f136";
+}
+.dsvy-rodiar-icon-call:before {
+    content: "\f137";
+}
+.dsvy-rodiar-icon-customer-service:before {
+    content: "\f138";
+}
+.dsvy-rodiar-icon-pin:before {
+    content: "\f139";
+}
+.dsvy-rodiar-icon-pin-1:before {
+    content: "\f13a";
+}
+.dsvy-rodiar-icon-open:before {
+    content: "\f13b";
+}
+.dsvy-rodiar-icon-email:before {
+    content: "\f13c";
+}
+.dsvy-rodiar-icon-email-1:before {
+    content: "\f13d";
+}
+.dsvy-rodiar-icon-horse-1:before {
+    content: "\f13e";
+}
+.dsvy-rodiar-icon-horse-2:before {
+    content: "\f13f";
+}
+.dsvy-rodiar-icon-right-arrow-2:before {
+    content: "\f140";
+}
+.dsvy-rodiar-icon-wheel-1:before {
+    content: "\f141";
+}

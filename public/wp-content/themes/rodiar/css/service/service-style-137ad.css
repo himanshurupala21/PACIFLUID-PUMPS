@@ -1,0 +1,101 @@
+/* Service Style 1 */
+.dsvy-service-style-1 .dsvy-featured-wrapper img,
+.dsvy-service-style-1 .designervily-post-item{
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.dsvy-service-style-1 .dsvy-service-img-wrapper{
+  position: relative;
+  overflow: hidden; 
+}
+.dsvy-service-style-1 .designervily-box-content{
+  position: relative;
+  padding-top: 25px;
+  padding-right: 45px;
+}
+.dsvy-service-style-1:hover .dsvy-featured-wrapper img{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.dsvy-service-style-1 .dsvy-service-title {
+  position: relative;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 600;
+  margin: 0px;   
+}
+.dsvy-service-style-1 .dsvy-service-title a{
+  color: #fff;
+}
+.dsvy-service-style-1 .dsvy-service-title a:hover{
+	color: var(--dsvy-rodiar-global-color);
+}
+.dsvy-service-style-1 .dsvy-service-content{
+  padding-top: 20px;
+}
+.dsvy-service-style-1 .dsvy-service-icon-wrapper{
+  display: none;
+}
+.dsvy-service-style-1 .dsvy-service-cat h4 {
+  position: relative;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+.dsvy-service-style-1 .dsvy-service-cat h4 a{
+  font-weight: 700;
+}
+.dsvy-service-style-1 .dsvy-service-cat h4:after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  width: 30px;
+  height: 1px;
+  margin-left: 10px;
+  background-color:  var(--dsvy-rodiar-global-color);
+}
+.dsvy-service-style-1 .dsvy-service-cat h4 a{
+  color: #a4a7a9;
+}
+.dsvy-service-style-1 .designervily-box-content:after {
+  content: "0" counter(dsvybox2) "";
+  counter-increment: dsvybox2;
+  position: absolute;
+  top: -40px;
+  right: 10px;
+  z-index: 99;
+  font-size: 72px;
+  line-height: 72px;
+  color: transparent;
+  -webkit-text-stroke: 1px #65686a;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+.dsvy-service-style-1 .designervily-post-item .designervily-box-content:after{
+  font-weight: 600;
+}
+.dsvy-service-style-1:hover .designervily-box-content:after {
+  top: -45px;
+  -webkit-text-stroke: 1px var(--dsvy-rodiar-global-color);
+}
+.dsvy-service-style-1 .designervilyi-box-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  text-align: left;
+  padding: 30px 40px;
+  background: -moz-linear-gradient(bottom,  rgba(16,18,20,0.93) 0%, rgba(23,23,23,0) 52%, rgba(30,28,26,0) 100%); 
+  background: -webkit-linear-gradient(bottom,  rgba(16,18,20,0.93) 0%,rgba(23,23,23,0) 52%,rgba(30,28,26,0) 100%); 
+  background: linear-gradient(to top,  rgba(16,18,20,0.93) 0%,rgba(23,23,23,0) 52%,rgba(30,28,26,0) 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed101214', endColorstr='#001e1c1a',GradientType=0 );
+}
+.dsvy-element-service-style-1 .dsvy-heading-subheading {
+    margin-bottom: 55px;
+}

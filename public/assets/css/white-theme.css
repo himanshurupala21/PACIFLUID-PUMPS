@@ -1,0 +1,466 @@
+/* ==========================================================================
+   PACIFLUID PUMPS - CLEAN, SIMPLE & ATTRACTIVE WHITE THEME
+   ========================================================================== */
+
+:root {
+  --theme-bg-white: #ffffff;
+  --theme-bg-light: #f8fafc;
+  --theme-bg-muted: #f1f5f9;
+  --theme-border: #e2e8f0;
+  --theme-border-light: #edf2f7;
+  --theme-text-primary: #0f172a;
+  --theme-text-secondary: #334155;
+  --theme-text-muted: #64748b;
+  --theme-primary: #0284c7;       /* Pacifluid Cyan-Blue */
+  --theme-primary-hover: #0369a1;
+  --theme-accent: #f97316;        /* Shakti Orange */
+  --theme-accent-hover: #ea580c;
+  --theme-success: #10b981;
+  --theme-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --theme-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --theme-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --theme-radius: 10px;
+}
+
+/* Global Background and Typography */
+html, body {
+  background-color: var(--theme-bg-white) !important;
+  color: var(--theme-text-secondary) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--theme-text-primary) !important;
+  font-weight: 700 !important;
+}
+
+p {
+  color: var(--theme-text-muted) !important;
+  line-height: 1.7 !important;
+}
+
+a {
+  color: var(--theme-primary) !important;
+  transition: all 0.2s ease !important;
+}
+
+a:hover {
+  color: var(--theme-accent) !important;
+}
+
+/* --------------------------------------------------------------------------
+   TOP HEADER & NAVIGATION (CLEAN WHITE)
+   -------------------------------------------------------------------------- */
+.sigma_header-top,
+.header-absolute .sigma_header-top {
+  background-color: var(--theme-bg-light) !important;
+  border-bottom: 1px solid var(--theme-border) !important;
+  padding: 8px 0 !important;
+}
+
+.sigma_header-top-links a,
+.sigma_header-top-links li,
+.sigma_header-top-sm li a {
+  color: var(--theme-text-muted) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.sigma_header-top-links a:hover {
+  color: var(--theme-primary) !important;
+}
+
+.sigma_header-top-links i {
+  color: var(--theme-primary) !important;
+}
+
+/* Middle / Main Header */
+.sigma_header-middle,
+.sigma_header.header-3 .sigma_header-middle,
+.header-absolute.sigma_header.header-3 .sigma_header-middle {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid var(--theme-border) !important;
+  box-shadow: var(--theme-shadow-sm) !important;
+}
+
+.sigma_header.header-1.sticky .sigma_header-middle,
+.sigma_header.sticky .sigma_header-middle {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: var(--theme-shadow-md) !important;
+}
+
+/* Nav Links */
+.navbar-nav .menu-item > a,
+.sigma_header-middle .navbar > .navbar-nav > .menu-item > a {
+  color: var(--theme-text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 24px 14px !important;
+  transition: color 0.2s ease !important;
+}
+
+.navbar-nav .menu-item:hover > a,
+.navbar-nav .menu-item.active > a,
+.sigma_header-middle .navbar > .navbar-nav > .menu-item:hover > a {
+  color: var(--theme-primary) !important;
+}
+
+/* Dropdown Sub-menu */
+.sub-menu,
+.navbar-nav .sub-menu {
+  background-color: #ffffff !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--theme-radius) !important;
+  box-shadow: var(--theme-shadow-lg) !important;
+  padding: 8px 0 !important;
+}
+
+.sub-menu .menu-item a {
+  color: var(--theme-text-secondary) !important;
+  font-size: 13px !important;
+  padding: 10px 20px !important;
+  font-weight: 500 !important;
+  border-bottom: 1px solid var(--theme-border-light) !important;
+}
+
+.sub-menu .menu-item:last-child a {
+  border-bottom: none !important;
+}
+
+.sub-menu .menu-item a:hover {
+  background-color: var(--theme-bg-light) !important;
+  color: var(--theme-primary) !important;
+  padding-left: 24px !important;
+}
+
+/* --------------------------------------------------------------------------
+   CLEAN & ATTRACTIVE BUTTONS
+   -------------------------------------------------------------------------- */
+.sigma_btn-custom,
+.site-button,
+a.sigma_btn-custom {
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-primary-hover) 100%) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 12px 26px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.25s ease !important;
+}
+
+.sigma_btn-custom:hover,
+.site-button:hover,
+a.sigma_btn-custom:hover {
+  background: linear-gradient(135deg, var(--theme-primary-hover) 0%, #02507d 100%) !important;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35) !important;
+  transform: translateY(-2px) !important;
+  color: #ffffff !important;
+}
+
+.sigma_btn-custom.dark,
+.sigma_btn-custom.secondary {
+  background: linear-gradient(135deg, var(--theme-accent) 0%, var(--theme-accent-hover) 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.25) !important;
+}
+
+.sigma_btn-custom.dark:hover,
+.sigma_btn-custom.secondary:hover {
+  background: linear-gradient(135deg, var(--theme-accent-hover) 0%, #c2410c 100%) !important;
+  box-shadow: 0 6px 18px rgba(249, 115, 22, 0.35) !important;
+  color: #ffffff !important;
+}
+
+.sigma_btn-custom.light,
+.sigma_btn-custom.transparent {
+  background: #ffffff !important;
+  color: var(--theme-primary) !important;
+  border: 1.5px solid var(--theme-border) !important;
+  box-shadow: var(--theme-shadow-sm) !important;
+}
+
+.sigma_btn-custom.light:hover,
+.sigma_btn-custom.transparent:hover {
+  border-color: var(--theme-primary) !important;
+  color: var(--theme-primary-hover) !important;
+  background: var(--theme-bg-light) !important;
+}
+
+/* --------------------------------------------------------------------------
+   SECTIONS & PANELS (CLEAN WHITE)
+   -------------------------------------------------------------------------- */
+.section,
+.section-padding {
+  background-color: var(--theme-bg-white) !important;
+}
+
+/* Alternate light sections for clean contrast */
+.section:nth-of-type(even),
+.bg-light,
+.light-bg {
+  background-color: var(--theme-bg-light) !important;
+}
+
+/* Remove dark overlays and heavy textures */
+.dark-overlay::before,
+.secondary-overlay::before,
+.dark-overlay.dark-overlay-2::before,
+.dark-overlay.dark-overlay-3::before,
+.section-before {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Cards & Feature Boxes */
+.sigma_service,
+.sigma_info-box,
+.sigma_box,
+.counter-box,
+.card {
+  background-color: #ffffff !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: var(--theme-radius) !important;
+  box-shadow: var(--theme-shadow-sm) !important;
+  padding: 30px !important;
+  transition: all 0.3s ease !important;
+}
+
+.sigma_service:hover,
+.sigma_info-box:hover,
+.sigma_box:hover,
+.counter-box:hover,
+.card:hover {
+  border-color: var(--theme-primary) !important;
+  box-shadow: var(--theme-shadow-md) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* --------------------------------------------------------------------------
+   PRODUCTS SHOWCASE (CLEAN WHITE THEME)
+   -------------------------------------------------------------------------- */
+.sigma_product,
+.sigma_portfolio-item {
+  background-color: #ffffff !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: 12px !important;
+  box-shadow: var(--theme-shadow-sm) !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+}
+
+.sigma_product:hover,
+.sigma_portfolio-item:hover {
+  border-color: var(--theme-primary) !important;
+  box-shadow: var(--theme-shadow-lg) !important;
+  transform: translateY(-5px) !important;
+}
+
+.sigma_product-thumb,
+.sigma_portfolio-thumb {
+  background-color: var(--theme-bg-light) !important;
+  padding: 24px !important;
+  border-bottom: 1px solid var(--theme-border-light) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.sigma_product-thumb img {
+  max-height: 190px !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+}
+
+.sigma_product:hover .sigma_product-thumb img {
+  transform: scale(1.05) !important;
+}
+
+.sigma_product-body {
+  padding: 20px !important;
+  background-color: #ffffff !important;
+}
+
+.sigma_product-title a {
+  color: var(--theme-text-primary) !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+}
+
+.sigma_product-title a:hover {
+  color: var(--theme-primary) !important;
+}
+
+/* --------------------------------------------------------------------------
+   STATISTICS & COUNTERS (BRIGHT & CRISP)
+   -------------------------------------------------------------------------- */
+.counter-area,
+.sigma_counter {
+  background-color: #ffffff !important;
+  border-radius: var(--theme-radius) !important;
+}
+
+.sigma_counter .count,
+.dsvy-fid-title,
+.counter-box h2,
+.counter-box h3 {
+  color: var(--theme-primary) !important;
+  font-weight: 800 !important;
+  font-size: 38px !important;
+}
+
+/* --------------------------------------------------------------------------
+   TABLES & SPECIFICATIONS (CLEAN LIGHT DESIGN)
+   -------------------------------------------------------------------------- */
+table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid var(--theme-border) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+table th {
+  background-color: var(--theme-bg-muted) !important;
+  color: var(--theme-text-primary) !important;
+  font-weight: 700 !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid var(--theme-border) !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+}
+
+table td {
+  background-color: #ffffff !important;
+  color: var(--theme-text-secondary) !important;
+  padding: 12px 16px !important;
+  border-bottom: 1px solid var(--theme-border-light) !important;
+  font-size: 14px !important;
+}
+
+table tr:hover td {
+  background-color: var(--theme-bg-light) !important;
+}
+
+/* --------------------------------------------------------------------------
+   CLIENTS / PARTNERS CAROUSEL (CLEAN WHITE)
+   -------------------------------------------------------------------------- */
+.clients-section,
+.sigma_client-wrapper,
+.sigma_client-review {
+  background-color: var(--theme-bg-white) !important;
+  border-top: 1px solid var(--theme-border-light) !important;
+  border-bottom: 1px solid var(--theme-border-light) !important;
+  padding: 50px 0 !important;
+}
+
+.sigma_client-wrapper img,
+.owl-carousel img {
+  filter: grayscale(40%) opacity(85%) !important;
+  transition: all 0.3s ease !important;
+}
+
+.sigma_client-wrapper img:hover,
+.owl-carousel img:hover {
+  filter: grayscale(0%) opacity(100%) !important;
+  transform: scale(1.08) !important;
+}
+
+/* --------------------------------------------------------------------------
+   FORMS & INPUTS (CLEAN WHITE DESIGN)
+   -------------------------------------------------------------------------- */
+.form-control,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  background-color: #ffffff !important;
+  border: 1.5px solid var(--theme-border) !important;
+  color: var(--theme-text-primary) !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.form-control:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--theme-primary) !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+  outline: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER (CLEAN LIGHT SLATE & CRISP WHITE)
+   -------------------------------------------------------------------------- */
+.sigma_footer,
+.footer-2,
+footer {
+  background-color: var(--theme-bg-muted) !important;
+  border-top: 2px solid var(--theme-border) !important;
+  color: var(--theme-text-secondary) !important;
+}
+
+.sigma_footer .footer-widget h5,
+.sigma_footer h5,
+footer h5 {
+  color: var(--theme-text-primary) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin-bottom: 18px !important;
+  border-left: 3px solid var(--theme-primary) !important;
+  padding-left: 10px !important;
+}
+
+.sigma_footer ul li a,
+.footer-widget ul li a,
+footer a {
+  color: var(--theme-text-muted) !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.sigma_footer ul li a:hover,
+.footer-widget ul li a:hover,
+footer a:hover {
+  color: var(--theme-primary) !important;
+  padding-left: 4px !important;
+}
+
+.sigma_footer-bottom,
+footer .footer-bottom {
+  background-color: #e2e8f0 !important;
+  border-top: 1px solid var(--theme-border) !important;
+  padding: 18px 0 !important;
+  color: var(--theme-text-muted) !important;
+  font-size: 13px !important;
+}
+
+.sigma_footer-bottom a {
+  color: var(--theme-primary) !important;
+  font-weight: 600 !important;
+}
+
+/* Preloader Hidden */
+.sigma_preloader.hidden {
+  display: none !important;
+}
+
+/* Subtle Badge Style */
+.badge-clean {
+  background-color: #e0f2fe !important;
+  color: var(--theme-primary) !important;
+  font-weight: 600 !important;
+  border-radius: 20px !important;
+  padding: 4px 12px !important;
+  font-size: 12px !important;
+  border: 1px solid #bae6fd !important;
+}
