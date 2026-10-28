@@ -34,36 +34,9 @@ export default function Navbar({ onOpenQuote }) {
 
   return (
     <>
-      {/* Top Engineering Micro-Bar */}
-      <div className="bg-[#141416] text-white text-xs py-2 px-4 lg:px-8 border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
-          <div className="hidden md:flex items-center gap-2 text-white/60 font-display text-[11px] tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] animate-pulse"></span>
-            <span>Heavy-Duty Positive Displacement Gear Pumps • India & Global Export</span>
-          </div>
-          <div className="flex items-center gap-5 text-white/80 font-sans ml-auto">
-            <a 
-              href={`tel:${COMPANY_INFO.phone}`} 
-              className="flex items-center gap-1.5 hover:text-white transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#e31e24]" />
-              <span className="font-medium">{COMPANY_INFO.phone}</span>
-            </a>
-            <span className="text-white/20 hidden sm:inline">|</span>
-            <a 
-              href={`mailto:${COMPANY_INFO.email}`} 
-              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
-            >
-              <Mail className="w-3.5 h-3.5 text-white/50" />
-              <span>{COMPANY_INFO.email}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Cobwala Signature Floating Capsule Header */}
       <header 
-        className={`fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-7xl transition-all duration-300 rounded-full border border-black/10 shadow-lg ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-7xl transition-all duration-300 rounded-full border border-black/10 shadow-lg ${
           scrolled 
             ? "bg-white/95 backdrop-blur-md py-2.5 px-5 sm:px-6 shadow-xl" 
             : "bg-white/90 backdrop-blur-sm py-3 px-5 sm:px-7"
