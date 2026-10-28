@@ -61,13 +61,10 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
     }
   ];
 
-  const currentPump = heroPumps[selectedPumpIndex] || heroPumps[0];
-  const [anatomyView, setAnatomyView] = useState("assembled"); // 'assembled' or 'exploded'
-  const [showLabels, setShowLabels] = useState(true);
-  const [autoRotate, setAutoRotate] = useState(true);
+  const currentPump = heroPumps[selectedPumpIndex];
 
   return (
-    <section className="relative bg-white pt-24 sm:pt-28 pb-16 lg:pt-32 lg:pb-24 border-b border-[#E5E7EB] overflow-hidden">
+    <section className="relative bg-white pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-[#E5E7EB] overflow-hidden">
       {/* Background Video Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
@@ -76,62 +73,72 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
           muted
           playsInline
           preload="auto"
-          className="w-full h-full object-cover opacity-25"
+          className="w-full h-full object-cover opacity-35"
         >
           <source src="/img/video.mp4" type="video/mp4" />
         </video>
-        {/* Cobwala Ambient Radial Warm/Red Glow */}
-        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[#e31e24]/[0.08] rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute top-1/3 right-1/3 w-[400px] h-[400px] bg-amber-500/[0.05] rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white" />
+        {/* Soft text protection gradient on left and bottom */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-transparent to-white/60" />
       </div>
 
       {/* Background Blueprint Grid Layer */}
-      <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-40 z-[1]" />
+      <div className="absolute inset-0 blueprint-grid pointer-events-none opacity-50 z-[1]" />
+
+      {/* Decorative Technical Vector Lines */}
+      <svg 
+        className="absolute top-0 right-0 w-1/2 h-full opacity-[0.035] pointer-events-none z-[1]" 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 800 800"
+      >
+        <circle cx="400" cy="400" r="350" fill="none" stroke="#0B2341" strokeWidth="2" strokeDasharray="8 8" />
+        <circle cx="400" cy="400" r="280" fill="none" stroke="#0B2341" strokeWidth="1.5" />
+        <circle cx="400" cy="400" r="160" fill="none" stroke="#155A9C" strokeWidth="2" />
+        <line x1="50" y1="400" x2="750" y2="400" stroke="#0B2341" strokeWidth="1" strokeDasharray="4 4" />
+        <line x1="400" y1="50" x2="400" y2="750" stroke="#0B2341" strokeWidth="1" strokeDasharray="4 4" />
+      </svg>
 
       <div className="relative max-w-7xl mx-auto px-4 lg:px-8 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* LEFT 50% (Cols 1-6) — Cobwala Editorial Typography */}
+          {/* LEFT 45% (Cols 1-6) */}
           <div className="lg:col-span-6 space-y-6 lg:space-y-8 z-10">
             
-            {/* Eyebrow Label with Star */}
+            {/* Eyebrow Label */}
             <div className="eyebrow">
-              <span className="text-[#e31e24] text-sm">✴</span>
-              <span>OEM EXPERT • ROTARY GEAR • FUEL INJECTION • SS-316</span>
+              <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24] animate-pulse" />
+              <span>INDUSTRIAL PUMP MANUFACTURER</span>
             </div>
 
-            {/* Cobwala Signature Multi-Line Headline */}
-            <div className="space-y-1">
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold tracking-tight text-[#1a1a18] leading-[1.04]">
-                We build the pump. <br />
-                You power the <br />
-                <span className="text-[#e31e24]">industry.</span>
+            {/* Main Headline */}
+            <div className="space-y-2">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight text-[#1a1a18] leading-[1.08]">
+                Precision Pumping Solutions <br className="hidden sm:inline" />
+                <span className="text-[#e31e24]">Built for Industry.</span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="font-sans text-base sm:text-lg text-[#666663] leading-relaxed max-w-xl">
-              Precision positive displacement gear pumps manufactured to your duty cycle, viscosity, and spec — from high-pressure fuel injection to viscous bitumen & chemical transfer.
+              Pacifluid Pumps manufactures heavy-duty positive displacement pumping solutions engineered for reliable, zero-pulsation performance across demanding industrial environments with 100% factory hydrostatic testing.
             </p>
 
-            {/* Cobwala Action Buttons */}
+            {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-3.5 pt-1">
-              <button
-                onClick={() => onOpenQuote && onOpenQuote()}
-                className="btn btn-red group shadow-md"
-              >
-                <span>Start Your OEM RFQ</span>
-                <span className="text-white text-sm">✴</span>
-              </button>
-
               <Link
                 href="/products"
+                className="btn btn-red group shadow-md"
+              >
+                <span>Explore Products</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+              </Link>
+
+              <button
+                onClick={() => onOpenQuote && onOpenQuote()}
                 className="btn border border-[#1a1a18] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-white"
               >
-                <span>Explore Pump Range</span>
-              </Link>
+                <span>Request a Quote</span>
+              </button>
 
               {/* Manufacturing Video Lightbox Trigger */}
               <button
@@ -141,37 +148,31 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
                 <div className="w-7 h-7 rounded-full bg-[#e31e24]/10 flex items-center justify-center text-[#e31e24]">
                   <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                 </div>
-                <span>Watch Machining</span>
+                <span>Watch Machining Video</span>
               </button>
             </div>
 
             {/* Trust Metrics Strip */}
             <div className="pt-6 border-t border-[#e5e5e2] grid grid-cols-3 gap-4">
               <div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">38+ Years</p>
-                <p className="text-xs text-[#666663] font-sans">Established 1988</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">34+ Years</p>
+                <p className="text-xs text-[#666663] font-sans">Established 1990</p>
               </div>
               <div>
                 <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">100%</p>
                 <p className="text-xs text-[#666663] font-sans">Hydrostatic Tested</p>
               </div>
               <div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[#e31e24]">50,000+</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[#e31e24]">65,000+</p>
                 <p className="text-xs text-[#666663] font-sans">Pumps Deployed</p>
               </div>
             </div>
-
-            {/* Scroll Indicator */}
-            <div className="pt-2 flex items-center gap-2 text-xs font-display tracking-widest uppercase text-[#666663]">
-              <span>SCROLL</span>
-              <span className="text-[#e31e24]">✴</span>
-            </div>
           </div>
 
-          {/* RIGHT 50% (Cols 7-12) — Cobwala Precision Engineering Stage */}
+          {/* RIGHT 55% (Cols 7-12) — Precision Product Presentation */}
           <div className="lg:col-span-6 relative flex flex-col items-center">
             
-            {/* Model Selector Tabs */}
+            {/* Interactive Pump Model Selector Tabs */}
             <div className="w-full flex items-center justify-center gap-2 mb-4 overflow-x-auto pb-1">
               {heroPumps.map((pump, idx) => (
                 <button
@@ -184,93 +185,64 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
               ))}
             </div>
 
-            {/* Cobwala Rounded-3xl Stage with Radial Glow */}
+            {/* Product Image Stage */}
             <div className="relative w-full max-w-lg aspect-square sm:aspect-[4/3] flex items-center justify-center bg-[#fafaf9] rounded-3xl border border-[#e5e5e2] p-6 lg:p-10 shadow-sm group overflow-hidden">
               
-              {/* Radial Backdrop Glow */}
+              {/* Cobwala Ambient Radial Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
 
-              {/* Blueprint Reference Matrix */}
+              {/* Technical Blueprint Accent Lines in Background */}
               <div className="absolute inset-4 rounded-2xl border border-dashed border-[#1a1a18]/10 pointer-events-none" />
               <div className="absolute top-1/2 left-0 right-0 h-px bg-[#1a1a18]/5 pointer-events-none" />
               <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#1a1a18]/5 pointer-events-none" />
 
-              {/* Product Photo on Stage */}
+              {/* Large Pump Photo */}
               <div className="relative z-10 w-full h-full flex items-center justify-center">
                 <img
                   key={currentPump.image}
                   src={currentPump.image}
                   alt={currentPump.name}
-                  className={`max-h-[85%] max-w-[85%] object-contain product-shadow-lg transition-all duration-700 ${
-                    autoRotate ? "animate-pulse" : ""
-                  } ${anatomyView === "exploded" ? "scale-110" : "scale-100"}`}
+                  className="max-h-[85%] max-w-[85%] object-contain product-shadow-lg transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
-              {/* Floating Technical Tag 1 (Top-Left) */}
-              {showLabels && (
-                <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-2.5 sm:p-3 text-left">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 rounded-full bg-[#e31e24]" />
-                    <p className="text-[10px] sm:text-[11px] font-display font-bold text-[#1a1a18] uppercase tracking-wide">
-                      Industrial Solutions
-                    </p>
-                  </div>
-                  <p className="text-[10px] sm:text-[11px] text-[#666663] mt-0.5 font-sans">
-                    Pressure: <span className="font-semibold text-[#1a1a18]">{currentPump.pressure}</span>
-                  </p>
-                  <p className="text-[10px] sm:text-[11px] text-[#666663] font-sans">
-                    Discharge: <span className="font-semibold text-[#1a1a18]">{currentPump.flow}</span>
+              {/* Floating Technical Card 1 (Top-Left) */}
+              <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-3 text-left animate-float">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-[#e31e24]" />
+                  <p className="text-[11px] font-display font-bold text-[#1a1a18] uppercase tracking-wide">
+                    Industrial Solutions
                   </p>
                 </div>
-              )}
-
-              {/* Floating Technical Tag 2 (Bottom-Right) */}
-              {showLabels && (
-                <div className="absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-2.5 sm:p-3 text-left">
-                  <div className="flex items-center gap-1.5 text-emerald-600">
-                    <CheckCircle2 className="w-3.5 h-3.5" />
-                    <span className="text-[10px] sm:text-[11px] font-display font-bold text-[#1a1a18]">Zero Leakage</span>
-                  </div>
-                  <p className="text-[10px] sm:text-[11px] text-[#666663] mt-0.5 font-sans">
-                    MOC: <span className="font-medium text-[#1a1a18]">{currentPump.moc}</span>
-                  </p>
-                  <p className="text-[9px] sm:text-[10px] text-[#e31e24] font-display font-medium mt-0.5 flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3" /> 100% Hydro-Tested
-                  </p>
-                </div>
-              )}
-            </div>
-
-            {/* Cobwala Stage Control Bar (Pill Bar) */}
-            <div className="w-full mt-3 flex flex-wrap items-center justify-between gap-2 px-1 text-xs">
-              <div className="flex items-center gap-1.5 bg-[#141416] text-white rounded-full p-1 border border-black/10">
-                <button
-                  onClick={() => setAnatomyView(anatomyView === "assembled" ? "exploded" : "assembled")}
-                  className={`px-3 py-1 rounded-full text-[11px] font-display transition-colors ${
-                    anatomyView === "assembled" ? "bg-[#e31e24] text-white" : "text-white/70 hover:text-white"
-                  }`}
-                >
-                  {anatomyView === "assembled" ? "Assembled" : "Exploded Anatomy"}
-                </button>
-                <button
-                  onClick={() => setShowLabels(!showLabels)}
-                  className={`px-2.5 py-1 rounded-full text-[11px] font-display transition-colors ${
-                    showLabels ? "bg-white/20 text-white" : "text-white/50"
-                  }`}
-                >
-                  Labels
-                </button>
-                <button
-                  onClick={() => setAutoRotate(!autoRotate)}
-                  className={`px-2.5 py-1 rounded-full text-[11px] font-display transition-colors ${
-                    autoRotate ? "bg-[#e31e24] text-white" : "text-white/50"
-                  }`}
-                >
-                  Auto-Rotate
-                </button>
+                <p className="text-[11px] text-[#666663] mt-1 font-sans">
+                  Pressure: <span className="font-semibold text-[#1a1a18]">{currentPump.pressure}</span>
+                </p>
+                <p className="text-[11px] text-[#666663] font-sans">
+                  Discharge: <span className="font-semibold text-[#1a1a18]">{currentPump.flow}</span>
+                </p>
               </div>
 
+              {/* Floating Technical Card 2 (Bottom-Right) */}
+              <div className="absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-3 text-left">
+                <div className="flex items-center gap-1.5 text-emerald-600">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span className="text-[11px] font-display font-bold text-[#1a1a18]">Precision Machined</span>
+                </div>
+                <p className="text-[11px] text-[#666663] mt-1 font-sans">
+                  MOC: <span className="font-medium text-[#1a1a18]">{currentPump.moc}</span>
+                </p>
+                <p className="text-[10px] text-[#e31e24] font-display font-medium mt-0.5 flex items-center gap-1">
+                  <ShieldCheck className="w-3 h-3" /> 100% Factory Hydro-Tested
+                </p>
+              </div>
+            </div>
+
+            {/* Model Details Under Stage */}
+            <div className="w-full mt-4 flex items-center justify-between px-2 text-xs">
+              <div>
+                <p className="font-display font-bold text-[#1a1a18] text-sm">{currentPump.name}</p>
+                <p className="text-[#666663] font-sans text-xs">{currentPump.subtitle}</p>
+              </div>
               <a
                 href={currentPump.pdf}
                 target="_blank"

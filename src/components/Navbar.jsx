@@ -34,27 +34,50 @@ export default function Navbar({ onOpenQuote }) {
 
   return (
     <>
-      {/* Cobwala Signature Floating Capsule Header */}
+      {/* Top Engineering Micro-Bar */}
+      <div className="bg-[#141416] text-white text-xs py-2 px-4 lg:px-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
+          <div className="hidden md:flex items-center gap-2 text-white/60 font-display text-[11px] tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] animate-pulse"></span>
+            <span>Heavy-Duty Positive Displacement Gear Pumps • India & Global Export</span>
+          </div>
+          <div className="flex items-center gap-5 text-white/80 font-sans ml-auto">
+            <a 
+              href={`tel:${COMPANY_INFO.phone}`} 
+              className="flex items-center gap-1.5 hover:text-white transition-colors"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#e31e24]" />
+              <span className="font-medium">{COMPANY_INFO.phone}</span>
+            </a>
+            <span className="text-white/20 hidden sm:inline">|</span>
+            <a 
+              href={`mailto:${COMPANY_INFO.email}`} 
+              className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-white/50" />
+              <span>{COMPANY_INFO.email}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Sticky Header */}
       <header 
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[94%] max-w-7xl transition-all duration-300 rounded-full border border-black/10 shadow-lg ${
+        className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? "bg-white/95 backdrop-blur-md py-2.5 px-5 sm:px-6 shadow-xl" 
-            : "bg-white/90 backdrop-blur-sm py-3 px-5 sm:px-7"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#e5e5e2] py-3" 
+            : "bg-white border-b border-[#e5e5e2] py-3.5"
         }`}
       >
-        <div className="flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative h-9 sm:h-10 w-32 sm:w-40 flex items-center">
+          <Link href="/" className="flex items-center group">
+            <div className="relative h-11 w-36 sm:w-44 flex items-center">
               <img 
                 src="/assets/img/logo.png" 
                 alt="Pacifluid Pumps Logo" 
                 className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
               />
-            </div>
-            <div className="hidden xl:flex items-center gap-1.5 pl-3 border-l border-[#e5e5e2] text-[10px] font-display uppercase tracking-widest text-[#666663]">
-              <span className="text-[#e31e24]">✴</span>
-              <span>OEM EXPERT</span>
             </div>
           </Link>
 
@@ -191,30 +214,21 @@ export default function Navbar({ onOpenQuote }) {
 
             <Link 
               href="/contact" 
-              className="px-3.5 py-1.5 text-xs font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Contact
             </Link>
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-3">
             <a 
               href={`tel:${COMPANY_INFO.phone}`} 
-              className="btn btn-sm border border-[#e5e5e2] text-[#1a1a18] hover:border-[#1a1a18] bg-white transition-all flex items-center gap-1.5"
+              className="btn btn-sm border border-[#e5e5e2] text-[#1a1a18] hover:border-[#1a1a18] bg-white transition-all flex items-center gap-2"
             >
               <Phone className="w-3.5 h-3.5 text-[#e31e24]" />
-              <span className="hidden xl:inline">Call Now</span>
+              <span>Call Now</span>
             </a>
-
-            {/* Cobwala Quick RFQ Tray Button */}
-            <button
-              onClick={() => onOpenQuote && onOpenQuote()}
-              title="Quick Technical RFQ"
-              className="w-8 h-8 rounded-full border border-[#e5e5e2] flex items-center justify-center text-[#1a1a18] hover:border-[#1a1a18] hover:bg-[#fafaf9] transition-all cursor-pointer"
-            >
-              <FileText className="w-3.5 h-3.5 text-[#666663]" />
-            </button>
 
             <button 
               onClick={() => onOpenQuote && onOpenQuote()}

@@ -3,11 +3,8 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import OutlineMarquee from "@/components/OutlineMarquee";
 import StatsSection from "@/components/StatsSection";
-import FluidViscositySection from "@/components/FluidViscositySection";
 import ProductShowcase from "@/components/ProductShowcase";
-import OEMServicesSection from "@/components/OEMServicesSection";
 import AboutSection from "@/components/AboutSection";
 import ManufacturingSection from "@/components/ManufacturingSection";
 import ApplicationsSection from "@/components/ApplicationsSection";
@@ -39,41 +36,32 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      {/* 1. Cobwala Floating Capsule Header */}
+      {/* 1. HEADER (Section 5 & 25) */}
       <Navbar onOpenQuote={() => handleOpenQuote()} />
 
       <main className="grow">
-        {/* 2. Cobwala Hero Section with Multi-Line Editorial Typography & Engineering Stage */}
+        {/* 2. HERO SECTION (Section 6 & 7) */}
         <Hero 
           onOpenQuote={() => handleOpenQuote()} 
           onOpenVideo={() => setVideoModalOpen(true)}
         />
 
-        {/* 3. Cobwala Signature Outline Typography Marquee Ticker */}
-        <OutlineMarquee />
-
-        {/* 4. Cobwala 5-Column Metrics & Engineering Assurance Standards */}
+        {/* 3. TRUST / HIGHLIGHTS (Section 11) */}
         <StatsSection />
 
-        {/* 5. Cobwala Optical / Mood Slider re-imagined for Fluid Viscosity & Flow */}
-        <FluidViscositySection onOpenQuote={handleOpenQuote} />
-
-        {/* 6. Cobwala OEM Product Catalogue & Filter Chips */}
+        {/* 4. PRODUCT CATEGORIES & SHOWCASE (Section 8 & 17) */}
         <ProductShowcase 
           onOpenSpecs={handleOpenSpecs}
           onOpenQuote={handleOpenQuote}
         />
 
-        {/* 7. Cobwala 3-Column OEM & Bespoke Engineering Services */}
-        <OEMServicesSection onOpenQuote={handleOpenQuote} />
-
-        {/* 8. About Company Heritage & Engineering Credentials */}
+        {/* 6. ABOUT PACIFLUID (Section 10) */}
         <AboutSection />
 
-        {/* 9. Manufacturing & 5-Stage Testing Gates (Cobwala Night Panel) */}
+        {/* 7. ENGINEERING / MANUFACTURING (Section 15) */}
         <ManufacturingSection />
 
-        {/* 10. Process Applications (3 on Home with View All redirect) */}
+        {/* 8. APPLICATIONS (Section 12 - 3 Featured on Home with View All redirect) */}
         <ApplicationsSection 
           limit={3}
           onSelectApp={() => {}} 

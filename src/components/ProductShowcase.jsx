@@ -29,14 +29,14 @@ export default function ProductShowcase({ onOpenSpecs, onOpenQuote }) {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#e5e5e2]">
           <div className="space-y-3">
             <div className="eyebrow">
-              <span className="text-[#e31e24] text-sm">✴</span>
-              <span>OEM CATALOGUE • SHAKTI ENGINEERS</span>
+              <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+              <span>MANUFACTURING PORTFOLIO</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1a1a18]">
-              Industrial Pump Range
+            <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#1a1a18]">
+              OUR PUMPING SOLUTIONS
             </h2>
             <p className="font-sans text-base text-[#666663] max-w-2xl leading-relaxed">
-              Every pump precision machined to your spec and duty cycle — from high-pressure fuel injection to viscous bitumen, chemical, and sanitary food transfer.
+              Engineered for reliable industrial performance. Precision positive displacement gear pumps built for heavy viscosity, aggressive chemical transfer, and high-pressure fuel injection.
             </p>
           </div>
 
