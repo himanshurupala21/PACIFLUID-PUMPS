@@ -8,24 +8,29 @@ export default function FloatingActions({ onOpenQuote }) {
 
   return (
     <>
-      {/* Desktop Floating WhatsApp Button */}
-      <div className="hidden sm:block fixed bottom-6 right-6 z-40">
+      {/* Desktop Floating Cobwala Action Stack */}
+      <div className="hidden sm:flex items-center gap-2.5 fixed bottom-6 right-6 z-40">
+        {/* Cobwala Signature Assistant Pill */}
+        <button
+          onClick={() => onOpenQuote && onOpenQuote({ notes: "PaciAssist Technical Consultation" })}
+          className="flex items-center gap-2 bg-[#141416] hover:bg-[#202024] text-white px-4 py-2.5 rounded-full shadow-lg border border-white/10 transition-all hover:scale-105 active:scale-95 font-display cursor-pointer"
+        >
+          <span className="text-[#e31e24] text-xs">✴</span>
+          <span className="text-xs font-semibold">PaciAssist</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse ml-0.5" />
+        </button>
+
+        {/* WhatsApp Round Button */}
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-lg hover:shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 font-display"
+          className="group flex items-center justify-center w-11 h-11 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full shadow-lg hover:shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95"
           aria-label="Chat with Pacifluid on WhatsApp"
         >
-          <div className="w-5 h-5 flex items-center justify-center">
-            {/* SVG WhatsApp icon */}
-            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-            </svg>
-          </div>
-          <span className="text-xs font-semibold tracking-wide">
-            Chat on WhatsApp
-          </span>
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
         </a>
       </div>
 

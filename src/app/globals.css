@@ -54,11 +54,27 @@
   font-family: var(--font-sans);
 }
 
+.stroke-text {
+  -webkit-text-stroke: 1.5px #1a1a18;
+  color: transparent;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.stroke-text-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+  color: transparent;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 .eyebrow {
   font-family: var(--font-display);
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--ink-soft);
   display: inline-flex;
@@ -74,8 +90,8 @@
   color: var(--ink);
   background: transparent;
   border-radius: 9999px;
-  padding: 11px 22px;
-  font-size: 14px;
+  padding: 10px 22px;
+  font-size: 13.5px;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -109,8 +125,8 @@
 }
 
 .btn-sm {
-  padding: 8px 16px;
-  font-size: 13px;
+  padding: 7px 16px;
+  font-size: 12.5px;
 }
 
 /* Cobwala Style Modern Filter Chips */
@@ -120,7 +136,7 @@
   background: #ffffff;
   border-radius: 9999px;
   padding: 6px 14px;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 500;
   font-family: var(--font-display);
   display: inline-flex;
@@ -156,10 +172,10 @@
 }
 
 .card-night {
-  background: #18181b;
+  background: #121214;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  border-radius: 28px;
   position: relative;
   overflow: hidden;
 }
@@ -204,14 +220,12 @@
   animation-play-state: paused;
 }
 
-/* Floating animation */
-@keyframes subtle-float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-6px); }
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
 }
 
-.animate-float {
-  animation: subtle-float 5s ease-in-out infinite;
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
 }
 
 /* Custom Scrollbar */

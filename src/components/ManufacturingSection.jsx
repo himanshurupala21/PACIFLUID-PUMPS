@@ -31,17 +31,20 @@ export default function ManufacturingSection() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-16">
 
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="eyebrow justify-center">
-            <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
-            <span>IN-HOUSE PRODUCTION CAPABILITIES</span>
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-[#e5e5e2]">
+          <div className="space-y-3">
+            <div className="eyebrow">
+              <span className="text-[#e31e24] text-sm">✴</span>
+              <span>MANUFACTURING & QUALITY CONTROL</span>
+            </div>
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1a1a18]">
+              Lines open to inspection. <br className="hidden sm:inline" />
+              Quality measured in decimals.
+            </h2>
+            <p className="font-sans text-base text-[#666663] max-w-2xl leading-relaxed">
+              Every single pump that leaves Shakti Engineers passes five automated testing gates before it is sealed in your export crate.
+            </p>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#1a1a18]">
-            Built Around Precision Engineering
-          </h2>
-          <p className="font-sans text-base text-[#666663] leading-relaxed">
-            Our Ahmedabad works facility operates dedicated machining bays, tooling setups, and computerized testing infrastructure to deliver zero-defect positive displacement pumps.
-          </p>
         </div>
 
         {/* 4 Capabilities Grid with Real Photos */}
@@ -77,29 +80,46 @@ export default function ManufacturingSection() {
           <div className="absolute right-0 top-0 w-96 h-96 bg-[#e31e24]/12 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -left-20 -bottom-20 w-80 h-80 bg-white/5 rounded-full blur-2xl pointer-events-none" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-display font-medium text-white/90 border border-white/15">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#e31e24]" />
-                <span>100% QUALITY INSPECTION & TEST CERTIFICATE</span>
+          <div className="relative z-10 space-y-8">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-display font-medium text-white/90 border border-white/15">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#e31e24]" />
+                  <span>5-STAGE QUALITY GATES</span>
+                </div>
+                <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white mt-2">
+                  100% Pre-Dispatch Hydrostatic & Volumetric Validation
+                </h3>
               </div>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">
-                Hydrostatic Pressure Testing on 100% of Pumps
-              </h3>
-              <p className="font-sans text-sm text-white/70 leading-relaxed max-w-2xl">
-                Unlike mass-market assemblers, every Pacifluid pump undergoes mandatory hydrostatic pressure holding, volumetric efficiency verification, and seal integrity testing before dispatch. We supply official Test Certificates with each consignment.
-              </p>
+              <div className="flex items-center gap-3">
+                <div className="text-right">
+                  <span className="text-[10px] font-display uppercase tracking-wider text-white/50 block">Pass Rate</span>
+                  <span className="font-display text-xl font-bold text-white">99.8%</span>
+                </div>
+              </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
-                <p className="font-display text-2xl font-bold text-white">Up to 50 Bar</p>
-                <p className="font-sans text-xs text-white/60">Hydro Test Bay</p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-center">
-                <p className="font-display text-2xl font-bold text-[#e31e24]">Zero Leakage</p>
-                <p className="font-sans text-xs text-white/60">Mechanical Seal Validation</p>
-              </div>
+            {/* 5 Testing Gates Horizontal Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+              {[
+                { gate: "Gate 01", title: "Hydrostatic Pressure", detail: "1.5x working pressure for 30 min" },
+                { gate: "Gate 02", title: "Tooth Mesh Backlash", detail: "< 0.01mm optical coordinate check" },
+                { gate: "Gate 03", title: "Volumetric Flow Rate", detail: "Zero pulsation verification" },
+                { gate: "Gate 04", title: "Mechanical Seal Check", detail: "100% zero drop seal guarantee" },
+                { gate: "Gate 05", title: "Dynamic Balancing", detail: "< 0.02mm shaft runout test" }
+              ].map((item) => (
+                <div key={item.gate} className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-1">
+                  <span className="text-[10px] font-display uppercase tracking-widest text-[#e31e24] font-semibold">
+                    {item.gate}
+                  </span>
+                  <p className="font-display text-xs font-semibold text-white">
+                    {item.title}
+                  </p>
+                  <p className="text-[11px] font-sans text-white/60">
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
