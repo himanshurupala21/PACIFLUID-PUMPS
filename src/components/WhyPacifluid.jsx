@@ -40,7 +40,7 @@ export default function WhyPacifluid() {
             Why Industrial Plants Rely on Pacifluid
           </h2>
           <p className="font-sans text-base text-[#666663] leading-relaxed">
-            Built with 34+ years of precision manufacturing heritage by Shakti Engineers to withstand punishing 24/7 operating regimes.
+            Built with precision manufacturing heritage by Shakti Engineers to withstand punishing 24/7 operating regimes.
           </p>
         </div>
 

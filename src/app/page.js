@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import StatsSection from "@/components/StatsSection";
 import ProductShowcase from "@/components/ProductShowcase";
 import AboutSection from "@/components/AboutSection";
 import ManufacturingSection from "@/components/ManufacturingSection";
@@ -46,10 +45,7 @@ export default function HomePage() {
           onOpenVideo={() => setVideoModalOpen(true)}
         />
 
-        {/* 3. TRUST / HIGHLIGHTS (Section 11) */}
-        <StatsSection />
-
-        {/* 4. PRODUCT CATEGORIES & SHOWCASE (Section 8 & 17) */}
+        {/* 3. PRODUCT CATEGORIES & SHOWCASE (Section 8 & 17) */}
         <ProductShowcase 
           onOpenSpecs={handleOpenSpecs}
           onOpenQuote={handleOpenQuote}

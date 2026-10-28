@@ -151,22 +151,6 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
                 <span>Watch Machining Video</span>
               </button>
             </div>
-
-            {/* Trust Metrics Strip */}
-            <div className="pt-6 border-t border-[#e5e5e2] grid grid-cols-3 gap-4">
-              <div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">34+ Years</p>
-                <p className="text-xs text-[#666663] font-sans">Established 1990</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">100%</p>
-                <p className="text-xs text-[#666663] font-sans">Hydrostatic Tested</p>
-              </div>
-              <div>
-                <p className="font-display text-2xl sm:text-3xl font-bold text-[#e31e24]">65,000+</p>
-                <p className="text-xs text-[#666663] font-sans">Pumps Deployed</p>
-              </div>
-            </div>
           </div>
 
           {/* RIGHT 55% (Cols 7-12) — Precision Product Presentation */}

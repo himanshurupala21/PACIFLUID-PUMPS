@@ -36,7 +36,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 space-y-6">
                 <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#e31e24]">
-                  ESTABLISHED 1990
+                  SHAKTI ENGINEERS
                 </span>
                 <h2 className="font-display text-3xl font-bold text-[#1a1a18]">
                   Pioneering Fluid Precision Engineering
@@ -45,19 +45,8 @@ export default function AboutPage() {
                   Founded by <strong>Shakti Engineers</strong>, Pacifluid Pumps has grown from a specialized tooling workshop into one of India’s most respected manufacturers of industrial positive displacement rotary gear pumps, sanitary stainless steel gear pumps, and internal fuel injection gear pumps.
                 </p>
                 <p className="font-sans text-sm text-[#666663] leading-relaxed">
-                  Headquartered in Ahmedabad with an advanced manufacturing works facility in Ahmedabad, Gujarat, we supply continuous process plants, public sector undertakings, boiler OEMs, and international export partners across 28+ countries.
+                  Headquartered in Ahmedabad with an advanced manufacturing works facility in Ahmedabad, Gujarat, we supply continuous process plants, public sector undertakings, boiler OEMs, and international export partners.
                 </p>
-
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-[#e5e5e2]">
-                  <div>
-                    <p className="font-display text-2xl font-bold text-[#1a1a18]">34+ Years</p>
-                    <p className="text-xs text-[#666663] font-sans">Engineering Heritage</p>
-                  </div>
-                  <div>
-                    <p className="font-display text-2xl font-bold text-[#e31e24]">65,000+</p>
-                    <p className="text-xs text-[#666663] font-sans">Installations Worldwide</p>
-                  </div>
-                </div>
               </div>
 
               <div className="lg:col-span-5">

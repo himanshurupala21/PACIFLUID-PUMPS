@@ -45,7 +45,7 @@ export default function AboutSection() {
             </div>
 
             <p className="font-sans text-base text-[#666663] leading-relaxed">
-              Established in 1990 under <strong>Shakti Engineers</strong>, Pacifluid Pumps has emerged as one of India's foremost manufacturers and exporters of positive displacement rotary gear pumps, internal fuel injection pumps, and sanitary stainless steel transfer systems.
+              Manufactured by <strong>Shakti Engineers</strong>, Pacifluid Pumps delivers high-performance positive displacement rotary gear pumps, internal fuel injection pumps, and sanitary stainless steel transfer systems.
             </p>
 
             <p className="font-sans text-sm text-[#666663] leading-relaxed">
@@ -56,15 +56,15 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="flex items-center gap-2.5 text-xs text-[#1a1a18] font-display font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#e31e24] shrink-0" />
-                <span>34+ Years Engineering Heritage</span>
+                <span>Precision Engineering Heritage</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-[#1a1a18] font-display font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#e31e24] shrink-0" />
-                <span>100% Tested Hydrostatic Test Bay</span>
+                <span>In-House Hydrostatic Testing</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-[#1a1a18] font-display font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#e31e24] shrink-0" />
-                <span>65,000+ Industrial Installations</span>
+                <span>Proven Heavy Duty Reliability</span>
               </div>
               <div className="flex items-center gap-2.5 text-xs text-[#1a1a18] font-display font-medium">
                 <CheckCircle2 className="w-4 h-4 text-[#e31e24] shrink-0" />
