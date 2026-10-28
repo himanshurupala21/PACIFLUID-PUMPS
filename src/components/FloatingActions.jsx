@@ -8,13 +8,13 @@ export default function FloatingActions({ onOpenQuote }) {
 
   return (
     <>
-      {/* Desktop Floating WhatsApp Button (Prompt Section 19 Requirement!) */}
+      {/* Desktop Floating WhatsApp Button */}
       <div className="hidden sm:block fixed bottom-6 right-6 z-40">
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95 border border-emerald-500/30"
+          className="group flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-lg hover:shadow-[0_10px_25px_-5px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 font-display"
           aria-label="Chat with Pacifluid on WhatsApp"
         >
           <div className="w-5 h-5 flex items-center justify-center">
@@ -29,27 +29,27 @@ export default function FloatingActions({ onOpenQuote }) {
         </a>
       </div>
 
-      {/* Mobile Sticky Bottom Action Bar (Prompt Section 19 Requirement!) */}
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#E5E7EB] p-2.5 grid grid-cols-3 gap-2 shadow-2xl">
+      {/* Mobile Sticky Bottom Action Bar */}
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#e5e5e2] p-2.5 grid grid-cols-3 gap-2 shadow-2xl font-display">
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-1.5 px-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-semibold"
         >
           <span className="text-emerald-600">WhatsApp</span>
         </a>
 
         <a
           href={`tel:${COMPANY_INFO.phone}`}
-          className="flex flex-col items-center justify-center py-1.5 px-1 rounded-lg bg-[#F7F8FA] text-[#0B2341] border border-[#E5E7EB] text-[11px] font-semibold"
+          className="flex flex-col items-center justify-center py-2 px-1 rounded-full bg-[#fafaf9] text-[#1a1a18] border border-[#e5e5e2] text-[11px] font-semibold"
         >
-          <span className="text-[#155A9C]">Call Now</span>
+          <span className="text-[#1a1a18]">Call Now</span>
         </a>
 
         <button
           onClick={() => onOpenQuote && onOpenQuote()}
-          className="flex flex-col items-center justify-center py-1.5 px-1 rounded-lg bg-[#D71920] text-white text-[11px] font-semibold shadow-2xs"
+          className="btn btn-sm btn-red py-2 px-1 text-[11px] font-semibold shadow-sm justify-center"
         >
           <span>Get Quote</span>
         </button>

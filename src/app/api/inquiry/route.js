@@ -53,7 +53,7 @@ export async function POST(request) {
     // Check for email credentials (trim strings and remove spaces from 16-character Google App Password)
     const rawGmailUser = process.env.GMAIL_USER || process.env.SMTP_USER || "";
     const rawGmailPass = process.env.GMAIL_APP_PASSWORD || process.env.SMTP_PASS || "";
-    const rawRecipient = process.env.INQUIRY_RECIPIENT_EMAIL || rawGmailUser || "pacifluid@rediffmail.com";
+    const rawRecipient = process.env.INQUIRY_RECIPIENT_EMAIL || rawGmailUser || "pacifluidpumps@gmail.com";
 
     const gmailUser = rawGmailUser.trim().replace(/^["']|["']$/g, "");
     const gmailPass = rawGmailPass.replace(/\s+/g, "").replace(/^["']|["']$/g, "");

@@ -2,8 +2,8 @@ import "./globals.css";
 
 export const metadata = {
   title: "Pacifluid Pumps | Industrial Rotary Gear Pump Manufacturer | Shakti Engineers",
-  description: "Manufacturer and exporter of heavy-duty positive displacement rotary twin gear pumps, sanitary stainless steel gear pumps, and internal fuel injection gear pumps in India. ISO 9001:2015 & TUV Rheinland certified.",
-  keywords: "rotary gear pump manufacturer, fuel injection internal gear pump, stainless steel gear pump, industrial positive displacement pump, pacifluid pumps, shakti engineers ahmedabad Ahmedabad",
+  description: "Manufacturer and exporter of heavy-duty positive displacement rotary gear pumps, sanitary stainless steel gear pumps, and internal fuel injection gear pumps in India. Trusted engineering since 1990.",
+  keywords: "rotary gear pump manufacturer, fuel injection gear pump, stainless steel gear pump, industrial positive displacement pump, pacifluid pumps, shakti engineers ahmedabad Ahmedabad",
   metadataBase: new URL("https://www.pacifluidpumps.com"),
   alternates: {
     canonical: "/",
@@ -43,9 +43,9 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-white text-[#111827] antialiased selection:bg-[#155A9C] selection:text-white">
+      <body className="min-h-screen bg-white text-[#1a1a18] antialiased selection:bg-[#e31e24] selection:text-white">
         {children}
       </body>
     </html>

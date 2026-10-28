@@ -20,17 +20,17 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
 
   const heroPumps = [
     {
-      name: "GP Series — Rotary Twin Gear Pump",
+      name: "GP Series — External Rotary Gear Pump",
       subtitle: "Flagship Heavy Duty Positive Displacement",
       image: "/assets/img/product/gp.png",
       pressure: "Up to 10 Bar (142 PSI)",
       flow: "5 to 500 LPM",
       badge: "Flagship Model",
-      moc: "Cast Iron / WCB / SS-316",
+      moc: "Cast Iron / WCB",
       pdf: "/pdf/pacifluid-gp-gear-pump.pdf"
     },
     {
-      name: "GPSS Series — All Stainless Steel (SS-316)",
+      name: "GPSS Series — Stainless Steel Rotary Gear Pump",
       subtitle: "Sanitary Pharma & Corrosive Chemical Grade",
       image: "/assets/img/product/gpss.png",
       pressure: "Up to 10 Bar",
@@ -40,7 +40,7 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
       pdf: "/pdf/pacifluid-gpss-ss-gear-pump.pdf"
     },
     {
-      name: "PIGB Series — Fuel Injection Internal Gear",
+      name: "PIGB Series — Fuel Injection Gear Pump (internal pump)",
       subtitle: "High-Pressure Oil Injection for Boilers & Burners",
       image: "/assets/img/product/pigb.png",
       pressure: "Up to 35 Bar (500 PSI)",
@@ -50,14 +50,14 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
       pdf: "/pdf/pacifluid-pigb-internal-gear-pump.pdf"
     },
     {
-      name: "PIGA Series — Internal Eccentric Gear Pump",
-      subtitle: "High-Viscosity Transfer (Bitumen, Resins, Inks)",
-      image: "/assets/img/product/piga.png",
-      pressure: "Up to 10 Bar",
-      flow: "10 to 450 LPM",
-      badge: "High Viscosity",
-      moc: "CI / Steel / Jacketed",
-      pdf: "/pdf/pacifluid-piga-internal-gear-pump.pdf"
+      name: "PGP Series — Precision External Gear",
+      subtitle: "High-Precision Forced Lubrication & Machine Tools",
+      image: "/assets/img/product/pgp.png",
+      pressure: "Up to 25 Bar (355 PSI)",
+      flow: "1.5 to 125 LPM",
+      badge: "High Precision",
+      moc: "High-grade CI FG-260",
+      pdf: "/pdf/pacifluid-pgp-rotary-gear-pump.pdf"
     }
   ];
 
@@ -105,29 +105,29 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
           <div className="lg:col-span-6 space-y-6 lg:space-y-8 z-10">
             
             {/* Eyebrow Label */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#F1F4F7] border border-[#E5E7EB] text-xs font-semibold tracking-wider text-[#155A9C] uppercase">
-              <span className="w-2 h-2 rounded-full bg-[#D71920] animate-pulse" />
+            <div className="eyebrow">
+              <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24] animate-pulse" />
               <span>INDUSTRIAL PUMP MANUFACTURER</span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#0B2341] leading-[1.12]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-bold tracking-tight text-[#1a1a18] leading-[1.08]">
                 Precision Pumping Solutions <br className="hidden sm:inline" />
-                <span className="text-[#155A9C]">Built for Industry.</span>
+                <span className="text-[#e31e24]">Built for Industry.</span>
               </h1>
             </div>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#667085] leading-relaxed max-w-xl">
-              Pacifluid Pumps manufactures industrial pumping solutions designed for reliable performance across demanding industrial applications. Engineered with precision gear geometry, zero pulsation, and 100% hydrostatic testing.
+            <p className="font-sans text-base sm:text-lg text-[#666663] leading-relaxed max-w-xl">
+              Pacifluid Pumps manufactures heavy-duty positive displacement pumping solutions engineered for reliable, zero-pulsation performance across demanding industrial environments with 100% factory hydrostatic testing.
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center gap-3.5 pt-1">
               <Link
                 href="/products"
-                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-white bg-[#D71920] hover:bg-[#ba141a] rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 group active:scale-95"
+                className="btn btn-red group shadow-md"
               >
                 <span>Explore Products</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -135,7 +135,7 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
 
               <button
                 onClick={() => onOpenQuote && onOpenQuote()}
-                className="px-6 py-3.5 text-sm sm:text-base font-semibold text-[#0B2341] bg-white border border-[#E5E7EB] hover:border-[#0B2341] hover:bg-[#F7F8FA] rounded-xl shadow-sm transition-all flex items-center gap-2 active:scale-95"
+                className="btn border border-[#1a1a18] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-white"
               >
                 <span>Request a Quote</span>
               </button>
@@ -143,9 +143,9 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
               {/* Manufacturing Video Lightbox Trigger */}
               <button
                 onClick={() => onOpenVideo && onOpenVideo()}
-                className="inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#155A9C] hover:text-[#0B2341] transition-colors py-2 px-3 rounded-lg hover:bg-[#F1F4F7]"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] transition-colors py-2 px-3 rounded-full hover:bg-[#f7f7f6]"
               >
-                <div className="w-7 h-7 rounded-full bg-[#155A9C]/10 flex items-center justify-center text-[#155A9C]">
+                <div className="w-7 h-7 rounded-full bg-[#e31e24]/10 flex items-center justify-center text-[#e31e24]">
                   <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
                 </div>
                 <span>Watch Machining Video</span>
@@ -153,18 +153,18 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
             </div>
 
             {/* Trust Metrics Strip */}
-            <div className="pt-6 border-t border-[#E5E7EB] grid grid-cols-3 gap-4">
+            <div className="pt-6 border-t border-[#e5e5e2] grid grid-cols-3 gap-4">
               <div>
-                <p className="text-xl sm:text-2xl font-bold text-[#0B2341]">34+ Years</p>
-                <p className="text-xs text-[#667085]">Established 1990</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">34+ Years</p>
+                <p className="text-xs text-[#666663] font-sans">Established 1990</p>
               </div>
               <div>
-                <p className="text-xl sm:text-2xl font-bold text-[#0B2341]">100%</p>
-                <p className="text-xs text-[#667085]">Hydrostatic Tested</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[#1a1a18]">100%</p>
+                <p className="text-xs text-[#666663] font-sans">Hydrostatic Tested</p>
               </div>
               <div>
-                <p className="text-xl sm:text-2xl font-bold text-[#155A9C]">ISO 9001</p>
-                <p className="text-xs text-[#667085]">TUV Rheinland Certified</p>
+                <p className="font-display text-2xl sm:text-3xl font-bold text-[#e31e24]">65,000+</p>
+                <p className="text-xs text-[#666663] font-sans">Pumps Deployed</p>
               </div>
             </div>
           </div>
@@ -173,16 +173,12 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
           <div className="lg:col-span-6 relative flex flex-col items-center">
             
             {/* Interactive Pump Model Selector Tabs */}
-            <div className="w-full flex items-center justify-center gap-1 sm:gap-2 mb-4 overflow-x-auto pb-2">
+            <div className="w-full flex items-center justify-center gap-2 mb-4 overflow-x-auto pb-1">
               {heroPumps.map((pump, idx) => (
                 <button
                   key={pump.name}
                   onClick={() => setSelectedPumpIndex(idx)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all shrink-0 border ${
-                    selectedPumpIndex === idx
-                      ? "bg-[#0B2341] text-white border-[#0B2341] shadow-sm"
-                      : "bg-[#F7F8FA] text-[#667085] border-[#E5E7EB] hover:bg-white hover:text-[#0B2341]"
-                  }`}
+                  className={`chip ${selectedPumpIndex === idx ? "chip-active" : ""}`}
                 >
                   {pump.badge}
                 </button>
@@ -190,12 +186,15 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
             </div>
 
             {/* Product Image Stage */}
-            <div className="relative w-full max-w-lg aspect-square sm:aspect-[4/3] flex items-center justify-center bg-radial from-[#F1F4F7] to-white rounded-2xl border border-[#E5E7EB] p-6 lg:p-10 shadow-sm group">
+            <div className="relative w-full max-w-lg aspect-square sm:aspect-[4/3] flex items-center justify-center bg-[#fafaf9] rounded-3xl border border-[#e5e5e2] p-6 lg:p-10 shadow-sm group overflow-hidden">
               
+              {/* Cobwala Ambient Radial Glow */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
+
               {/* Technical Blueprint Accent Lines in Background */}
-              <div className="absolute inset-4 rounded-xl border border-dashed border-[#155A9C]/20 pointer-events-none" />
-              <div className="absolute top-1/2 left-0 right-0 h-px bg-[#155A9C]/10 pointer-events-none" />
-              <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#155A9C]/10 pointer-events-none" />
+              <div className="absolute inset-4 rounded-2xl border border-dashed border-[#1a1a18]/10 pointer-events-none" />
+              <div className="absolute top-1/2 left-0 right-0 h-px bg-[#1a1a18]/5 pointer-events-none" />
+              <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#1a1a18]/5 pointer-events-none" />
 
               {/* Large Pump Photo */}
               <div className="relative z-10 w-full h-full flex items-center justify-center">
@@ -207,32 +206,32 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
                 />
               </div>
 
-              {/* Subtle Floating Technical Card 1 (Top-Left) */}
-              <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-sm border border-[#E5E7EB] shadow-md rounded-xl p-3 text-left animate-float">
+              {/* Floating Technical Card 1 (Top-Left) */}
+              <div className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-3 text-left animate-float">
                 <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-[#155A9C]" />
-                  <p className="text-[11px] font-bold text-[#0B2341] uppercase tracking-wide">
-                    Industrial Pump Solutions
+                  <div className="w-2 h-2 rounded-full bg-[#e31e24]" />
+                  <p className="text-[11px] font-display font-bold text-[#1a1a18] uppercase tracking-wide">
+                    Industrial Solutions
                   </p>
                 </div>
-                <p className="text-[10px] text-[#667085] mt-0.5">
-                  Pressure: <span className="font-semibold text-[#0B2341]">{currentPump.pressure}</span>
+                <p className="text-[11px] text-[#666663] mt-1 font-sans">
+                  Pressure: <span className="font-semibold text-[#1a1a18]">{currentPump.pressure}</span>
                 </p>
-                <p className="text-[10px] text-[#667085]">
-                  Discharge: <span className="font-semibold text-[#0B2341]">{currentPump.flow}</span>
+                <p className="text-[11px] text-[#666663] font-sans">
+                  Discharge: <span className="font-semibold text-[#1a1a18]">{currentPump.flow}</span>
                 </p>
               </div>
 
-              {/* Subtle Floating Technical Card 2 (Bottom-Right) */}
-              <div className="absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-sm border border-[#E5E7EB] shadow-md rounded-xl p-3 text-left">
+              {/* Floating Technical Card 2 (Bottom-Right) */}
+              <div className="absolute bottom-4 right-4 z-20 bg-white/95 backdrop-blur-md border border-[#e5e5e2] shadow-lg rounded-2xl p-3 text-left">
                 <div className="flex items-center gap-1.5 text-emerald-600">
                   <CheckCircle2 className="w-3.5 h-3.5" />
-                  <span className="text-[11px] font-bold text-[#0B2341]">Precision Engineering</span>
+                  <span className="text-[11px] font-display font-bold text-[#1a1a18]">Precision Machined</span>
                 </div>
-                <p className="text-[10px] text-[#667085] mt-0.5">
-                  MOC: <span className="font-medium text-[#0B2341]">{currentPump.moc}</span>
+                <p className="text-[11px] text-[#666663] mt-1 font-sans">
+                  MOC: <span className="font-medium text-[#1a1a18]">{currentPump.moc}</span>
                 </p>
-                <p className="text-[10px] text-[#155A9C] font-medium mt-0.5 flex items-center gap-1">
+                <p className="text-[10px] text-[#e31e24] font-display font-medium mt-0.5 flex items-center gap-1">
                   <ShieldCheck className="w-3 h-3" /> 100% Factory Hydro-Tested
                 </p>
               </div>
@@ -241,16 +240,16 @@ export default function Hero({ onOpenQuote, onOpenVideo }) {
             {/* Model Details Under Stage */}
             <div className="w-full mt-4 flex items-center justify-between px-2 text-xs">
               <div>
-                <p className="font-bold text-[#0B2341]">{currentPump.name}</p>
-                <p className="text-[#667085]">{currentPump.subtitle}</p>
+                <p className="font-display font-bold text-[#1a1a18] text-sm">{currentPump.name}</p>
+                <p className="text-[#666663] font-sans text-xs">{currentPump.subtitle}</p>
               </div>
               <a
                 href={currentPump.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-[#155A9C] hover:text-[#0B2341] font-medium"
+                className="chip text-xs hover:border-[#e31e24] hover:text-[#e31e24]"
               >
-                <Download className="w-3.5 h-3.5" />
+                <Download className="w-3.5 h-3.5 text-[#e31e24]" />
                 <span>PDF Specs</span>
               </a>
             </div>

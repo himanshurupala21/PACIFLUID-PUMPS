@@ -6,7 +6,7 @@ export const APPLICATIONS = [
     category: "oil-gas",
     image: "/img/applications/refineries.jpg",
     fluids: ["Crude Distillates", "Heavy Fuel Oils", "Lube Oil Stocks", "Petroleum Residue"],
-    pumps: ["GP Series", "PIGA Series", "FT Series"],
+    pumps: ["GP Series"],
     description: "Engineered for downstream refinery processes, handling crude oil derivatives, distillation products, high-temperature petroleum feedstocks, and heavy hydrocarbon transfer with continuous positive displacement reliability."
   },
   {
@@ -16,7 +16,7 @@ export const APPLICATIONS = [
     category: "food-agri",
     image: "/img/applications/sugar-plants.jpg",
     fluids: ["Heavy Molasses", "Raw Cane Juice", "Massecuite Slurries", "Sugar Syrups"],
-    pumps: ["PIGA Series", "GP Series", "GPSS Series"],
+    pumps: ["GP Series", "GPSS Series"],
     description: "Heavy torque gear pumps designed to handle viscous cane juices, filtration slurries, and crystallizing molasses. Features robust gear profiles and self-lubricating bronze bush bearings to prevent clogging and cavitation."
   },
   {
@@ -26,7 +26,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/steel-plants.jpg",
     fluids: ["Furnace Fuel Oil", "Rolling Mill Lubricants", "Cooling Circulation Fluids", "Gearbox Oils"],
-    pumps: ["GP Series", "PIGB Series", "FT Series"],
+    pumps: ["GP Series", "PIGB Series"],
     description: "Built for severe duty cycles in rolling mills, blast furnaces, and continuous casting lines. Delivers uninterrupted high-pressure fuel feeding to reheating burners and heavy forced lubrication to critical bearings."
   },
   {
@@ -36,7 +36,7 @@ export const APPLICATIONS = [
     category: "chemical",
     image: "/img/applications/petrochemical-organic-chemicals.jpg",
     fluids: ["Alkyd Resins", "Organic Solvents", "Chemical Catalysts", "Polymer Monomers"],
-    pumps: ["GPSS Series", "PIGA Series", "GP Series"],
+    pumps: ["GPSS Series", "GP Series"],
     description: "Precision metering and bulk transfer of low to high-viscosity petrochemical compounds, polymers, and organic solvents. Features chemically inert PTFE / mechanical sealing for leak-proof fluid containment."
   },
   {
@@ -56,7 +56,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/rubber-industries.jpg",
     fluids: ["Liquid Latex", "Synthetic Rubber", "Curing Agents", "Processing Oils"],
-    pumps: ["PIGA Series", "GP Series"],
+    pumps: ["GP Series"],
     description: "Self-priming pumps engineered for latex compounding, tire manufacturing, and rubber extrusion. Accurately doses curing accelerators and transfers high-tack rubber emulsions without coagulation."
   },
   {
@@ -96,7 +96,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/paper-mills.jpg",
     fluids: ["Starch Sizing", "Paper Coating Slurries", "Black Liquor", "Alum & Retention Aids"],
-    pumps: ["PIGA Series", "GP Series", "GPSS Series"],
+    pumps: ["GP Series", "GPSS Series"],
     description: "Reliable positive displacement pumping for paper stock sizing, chemical retention additive dosing, and viscous starch coating. Minimizes shear degradation while maintaining uniform fluid delivery."
   },
   {
@@ -106,7 +106,7 @@ export const APPLICATIONS = [
     category: "chemical",
     image: "/img/applications/chemicals-industries.jpg",
     fluids: ["Corrosive Acids", "Caustic Solutions", "Industrial Resins", "Polymer Emulsions"],
-    pumps: ["GPSS Series", "PIGA Series"],
+    pumps: ["GPSS Series"],
     description: "Engineered with corrosion-resistant SS-316 castings and Teflon/carbon mechanical seals. Handles aggressive chemicals, batch reactor dosing, and bulk chemical tanker offloading with dependable containment."
   },
   {
@@ -116,7 +116,7 @@ export const APPLICATIONS = [
     category: "oil-gas",
     image: "/img/applications/oilandgas-industries.jpg",
     fluids: ["Corrosion Inhibitors", "Glycol & Methanol", "Generator Fuel Oil", "Drilling Additives"],
-    pumps: ["PIGB Series", "GP Series", "FT Series"],
+    pumps: ["PIGB Series", "GP Series"],
     description: "Compact, high-reliability gear pumps designed for onshore and offshore oil & gas facilities. Delivers precise chemical injection into wellheads and flow streams, alongside rugged diesel fuel transfer."
   },
   {
@@ -126,7 +126,7 @@ export const APPLICATIONS = [
     category: "power-energy",
     image: "/img/applications/power-plant.jpg",
     fluids: ["Turbine Lube Oil", "Heavy Fuel Stock (LSHS)", "Boiler Feed Fuel", "Transformer Oil"],
-    pumps: ["GP Series", "PIGB Series", "FT Series"],
+    pumps: ["GP Series", "PIGB Series"],
     description: "Installed across thermal power stations, gas turbines, and hydro plants for critical turbine bearing lubrication, high-temperature fuel oil circulation, and transformer oil filtration."
   },
   {
@@ -136,7 +136,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/cement-plant.jpg",
     fluids: ["Grinding Aid Additives", "Heavy Gear Lubricants", "Kiln Fuel Oil", "Viscous Modifiers"],
-    pumps: ["GP Series", "PIGA Series"],
+    pumps: ["GP Series"],
     description: "Withstands dusty, harsh cement mill environments to meter grinding performance additives and circulate high-viscosity lubricants across heavy mill gearboxes and kiln roller assemblies."
   },
   {
@@ -146,7 +146,7 @@ export const APPLICATIONS = [
     category: "chemical",
     image: "/img/applications/paint-industries.jpg",
     fluids: ["Alkyd Resins", "Pigment Pastes", "Solvent-based Paints", "Latex Emulsions"],
-    pumps: ["PIGA Series", "GPSS Series"],
+    pumps: ["GPSS Series", "GP Series"],
     description: "Low-shear pumping prevents pigment agglomeration and resin foaming. Guarantees uniform batch delivery from mixing kettles to automated filling stations across paint and varnish manufacturing lines."
   },
   {
@@ -156,7 +156,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/synthetic-fiber-plants.jpg",
     fluids: ["Molten Polyester", "Nylon Polymer", "Spinning Dope", "Viscous Modifiers"],
-    pumps: ["PIGA Series", "GPSS Series"],
+    pumps: ["GPSS Series", "GP Series"],
     description: "Uniform, pulsation-free metering for polymer melt extrusion and spinning processes. Maintains consistent discharge pressure at high temperatures to ensure precise fiber denier and structural integrity."
   },
   {
@@ -176,7 +176,7 @@ export const APPLICATIONS = [
     category: "heavy-industry",
     image: "/img/applications/road-construction-machiery.jpg",
     fluids: ["Hot Bitumen (VG-30/40)", "Asphalt Emulsions", "Crumb Rubber Bitumen", "Coal Tar"],
-    pumps: ["PIGA Series (Jacketed)", "GP Series"],
+    pumps: ["GP Series (Jacketed)"],
     description: "Equipped with heating jackets to prevent cold bitumen solidification. Proven across mobile bitumen sprayers, asphalt batch mix plants, and road emulsion distribution rigs worldwide."
   }
 ];

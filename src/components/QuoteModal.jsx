@@ -10,7 +10,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
     company: "",
     phone: "",
     email: "",
-    product: initialProduct?.name || "GP Series — External Rotary Twin Gear Pump",
+    product: initialProduct?.name || "GP Series — External Rotary Gear Pump",
     quantity: "1 Unit",
     application: "",
     message: ""
@@ -28,7 +28,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
         company: "",
         phone: "",
         email: "",
-        product: initialProduct?.name || "GP Series — External Rotary Twin Gear Pump",
+        product: initialProduct?.name || "GP Series — External Rotary Gear Pump",
         quantity: "1 Unit",
         application: "",
         message: ""
@@ -68,26 +68,27 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
       onClick={handleClose}
     >
       <div
-        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-[#E5E7EB] overflow-hidden"
+        className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-[#e5e5e2] overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="px-6 py-5 border-b border-[#E5E7EB] flex items-center justify-between bg-[#F7F8FA]">
+        <div className="px-6 py-5 border-b border-[#e5e5e2] flex items-center justify-between bg-[#fafaf9]">
           <div>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-[#155A9C]">
-              OFFICIAL OEM QUOTATION
-            </span>
-            <h3 className="text-lg font-bold text-[#0B2341]">
+            <div className="eyebrow text-[10px]">
+              <span className="w-2 h-1 rounded-full bg-[#e31e24]" />
+              <span>OFFICIAL OEM QUOTATION</span>
+            </div>
+            <h3 className="font-display text-lg font-bold text-[#1a1a18] mt-0.5">
               Request Technical Quotation
             </h3>
           </div>
           <button
             onClick={handleClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-200 transition-colors cursor-pointer"
+            className="p-2 rounded-full text-stone-400 hover:text-[#1a1a18] hover:bg-stone-100 transition-colors cursor-pointer"
             aria-label="Close dialog"
           >
             <X className="w-5 h-5" />
@@ -101,80 +102,80 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
               <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h4 className="text-xl font-bold text-[#0B2341]">
+              <h4 className="font-display text-xl font-bold text-[#1a1a18]">
                 Quotation Request Submitted!
               </h4>
-              <p className="text-xs text-[#667085] max-w-sm mx-auto leading-relaxed">
+              <p className="font-sans text-xs text-[#666663] max-w-sm mx-auto leading-relaxed">
                 Thank you. Your pump inquiry has been registered with our technical sales division. You will receive an official technical datasheet and commercial quotation shortly.
               </p>
               <button
                 onClick={handleClose}
-                className="px-6 py-2.5 text-xs font-semibold text-white bg-[#0B2341] hover:bg-[#155A9C] rounded-xl shadow-xs transition-colors cursor-pointer"
+                className="btn btn-sm btn-red cursor-pointer"
               >
                 Close Window
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 font-sans">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Your Name *</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Your Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="e.g. Mukesh Shah"
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Company / Plant *</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Company / Plant *</label>
                   <input
                     type="text"
                     required
                     value={formData.company}
                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                     placeholder="e.g. Reliance Ahmedabad Refinery"
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Phone / Mobile *</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Phone / Mobile *</label>
                   <input
                     type="tel"
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98250 XXXXX"
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Email Address *</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Email Address *</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="purchase@company.com"
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div className="sm:col-span-2 space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Pump Series Required *</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Pump Series Required *</label>
                   <select
                     value={formData.product}
                     onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   >
                     {PRODUCTS.map((p) => (
                       <option key={p.id} value={p.name}>
@@ -186,19 +187,19 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-xs font-semibold text-[#0B2341]">Quantity</label>
+                  <label className="text-xs font-display font-medium text-[#1a1a18]">Quantity</label>
                   <input
                     type="text"
                     value={formData.quantity}
                     onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
                     placeholder="e.g. 2 Units"
-                    className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                    className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                   />
                 </div>
               </div>
 
               <div className="space-y-1">
-                <label className="text-xs font-semibold text-[#0B2341]">
+                <label className="text-xs font-display font-medium text-[#1a1a18]">
                   Fluid & Operating Parameters (Flow Rate, Pressure, Temp, Viscosity)
                 </label>
                 <textarea
@@ -206,7 +207,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Specify operating fluid (Furnace oil, LDO, Bitumen, Edible oil), flow rate (LPM), and discharge pressure (Bar)."
-                  className="w-full px-3.5 py-2 text-xs bg-[#F7F8FA] border border-[#E5E7EB] rounded-lg focus:outline-hidden focus:border-[#155A9C] focus:bg-white text-[#111827]"
+                  className="w-full px-3.5 py-2 text-xs bg-[#fafaf9] border border-[#e5e5e2] rounded-xl focus:outline-none focus:border-[#e31e24] focus:bg-white text-[#1a1a18]"
                 />
               </div>
 
@@ -221,7 +222,7 @@ export default function QuoteModal({ isOpen, onClose, initialProduct = null }) {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="w-full py-3 text-xs sm:text-sm font-semibold text-white bg-[#D71920] hover:bg-[#ba141a] rounded-xl shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50 active:scale-98"
+                  className="btn btn-red w-full py-3 text-xs sm:text-sm font-semibold shadow-md cursor-pointer disabled:opacity-50"
                 >
                   <Send className="w-4 h-4" />
                   <span>{status === "submitting" ? "Submitting Request..." : "Request Official Quotation"}</span>

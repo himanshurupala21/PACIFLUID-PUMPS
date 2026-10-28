@@ -32,26 +32,26 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="bg-[#F7F8FA] py-14 border-b border-[#E5E7EB]">
+    <section className="bg-[#fafaf9] py-14 border-b border-[#e5e5e2]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#E5E7EB]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#e5e5e2]">
           {stats.map((stat, i) => (
             <div 
               key={stat.label} 
               className={`space-y-2 ${i !== 0 ? "pt-6 sm:pt-0 sm:pl-8" : ""}`}
             >
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B2341]">
+                <span className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#1a1a18]">
                   {stat.value}
                 </span>
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#155A9C]">
+                <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#e31e24]">
                   {stat.unit}
                 </span>
               </div>
-              <h3 className="text-sm font-bold text-[#111827]">
+              <h3 className="font-display text-sm font-semibold text-[#1a1a18]">
                 {stat.label}
               </h3>
-              <p className="text-xs text-[#667085] leading-relaxed">
+              <p className="font-sans text-xs text-[#666663] leading-relaxed">
                 {stat.description}
               </p>
             </div>

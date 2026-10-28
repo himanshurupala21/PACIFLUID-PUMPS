@@ -61,8 +61,12 @@ export default function HomePage() {
         {/* 7. ENGINEERING / MANUFACTURING (Section 15) */}
         <ManufacturingSection />
 
-        {/* 8. APPLICATIONS (Section 12) */}
-        <ApplicationsSection onSelectApp={() => {}} onOpenQuote={(appTitle) => handleOpenQuote(appTitle ? { notes: `Inquiry for application: ${appTitle}` } : undefined)} />
+        {/* 8. APPLICATIONS (Section 12 - 3 Featured on Home with View All redirect) */}
+        <ApplicationsSection 
+          limit={3}
+          onSelectApp={() => {}} 
+          onOpenQuote={(appTitle) => handleOpenQuote(appTitle ? { notes: `Inquiry for application: ${appTitle}` } : undefined)} 
+        />
 
         {/* 9. INDUSTRIES (Section 13) */}
         <IndustriesSection />

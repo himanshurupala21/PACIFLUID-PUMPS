@@ -29,59 +29,62 @@ export default function ProductDetailClient({ product }) {
 
       <main className="grow">
         {/* Breadcrumb Strip */}
-        <div className="bg-[#F7F8FA] border-b border-[#E5E7EB] py-3.5">
-          <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center gap-2 text-xs text-[#667085]">
-            <Link href="/" className="hover:text-[#0B2341]">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link href="/products" className="hover:text-[#0B2341]">Products</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <span className="font-semibold text-[#0B2341] truncate">{product.name}</span>
+        <div className="bg-[#fafaf9] border-b border-[#e5e5e2] py-3.5">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center gap-2 text-xs font-sans text-[#666663]">
+            <Link href="/" className="hover:text-[#1a1a18] transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
+            <Link href="/products" className="hover:text-[#1a1a18] transition-colors">Products</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-stone-400" />
+            <span className="font-semibold text-[#1a1a18] truncate">{product.name}</span>
           </div>
         </div>
 
         {/* Product Hero Header Section */}
-        <section className="py-16 bg-white border-b border-[#E5E7EB]">
+        <section className="py-16 bg-white border-b border-[#e5e5e2]">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               {/* Product Image Stage */}
-              <div className="lg:col-span-5 flex items-center justify-center bg-[#F7F8FA] rounded-3xl p-8 border border-[#E5E7EB] aspect-[4/3] blueprint-grid">
+              <div className="lg:col-span-5 flex items-center justify-center bg-[#fafaf9] rounded-3xl p-8 border border-[#e5e5e2] aspect-[4/3] relative overflow-hidden group">
+                {/* Ambient glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#e31e24]/10 rounded-full blur-3xl pointer-events-none" />
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="max-h-[85%] max-w-[85%] object-contain product-shadow-lg"
+                  className="max-h-[85%] max-w-[85%] object-contain product-shadow-lg relative z-10 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
 
               {/* Title & Actions */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="space-y-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#155A9C]">
-                    {product.category.replace("-", " ")}
-                  </span>
-                  <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0B2341] tracking-tight leading-tight">
+                  <div className="eyebrow">
+                    <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+                    <span>{product.category.replace("-", " ")}</span>
+                  </div>
+                  <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#1a1a18] tracking-tight leading-tight">
                     {product.name}
                   </h1>
-                  <p className="text-base text-[#667085] leading-relaxed">
+                  <p className="font-sans text-base text-[#666663] leading-relaxed">
                     {product.shortDesc}
                   </p>
                 </div>
 
                 {/* Primary Action Buttons */}
-                <div className="flex flex-wrap items-center gap-4 pt-2">
+                <div className="flex flex-wrap items-center gap-3 pt-1">
                   <button
                     onClick={() => setQuoteOpen(true)}
-                    className="px-6 py-3 text-sm font-semibold text-white bg-[#D71920] hover:bg-[#ba141a] rounded-xl shadow-md transition-all flex items-center gap-2 active:scale-95"
+                    className="btn btn-red shadow-md cursor-pointer group"
                   >
                     <span>Request Quotation</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </button>
 
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-5 py-3 text-sm font-semibold text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 rounded-xl transition-all flex items-center gap-2"
+                    className="btn border border-emerald-300 text-emerald-800 bg-emerald-50 hover:bg-emerald-100"
                   >
                     <MessageCircle className="w-4 h-4 text-emerald-600" />
                     <span>WhatsApp Inquiry</span>
@@ -92,17 +95,17 @@ export default function ProductDetailClient({ product }) {
                       href={product.pdf}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-3 text-sm font-semibold text-[#0B2341] bg-white border border-[#E5E7EB] hover:bg-[#F7F8FA] rounded-xl transition-all flex items-center gap-2"
+                      className="btn border border-[#e5e5e2] text-[#1a1a18] hover:border-[#1a1a18] bg-white"
                     >
-                      <Download className="w-4 h-4 text-[#155A9C]" />
+                      <Download className="w-4 h-4 text-[#e31e24]" />
                       <span>PDF Catalog</span>
                     </a>
                   )}
                 </div>
 
-                <div className="pt-4 border-t border-[#E5E7EB] flex items-center gap-6 text-xs text-[#667085]">
+                <div className="pt-4 border-t border-[#e5e5e2] flex flex-wrap items-center gap-6 text-xs text-[#666663] font-sans">
                   <span className="flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-[#155A9C]" />
+                    <ShieldCheck className="w-4 h-4 text-[#e31e24]" />
                     100% Factory Hydro-Tested
                   </span>
                   <span>•</span>

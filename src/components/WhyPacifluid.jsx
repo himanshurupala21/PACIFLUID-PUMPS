@@ -27,18 +27,19 @@ export default function WhyPacifluid() {
   ];
 
   return (
-    <section className="py-24 bg-white border-b border-[#E5E7EB]">
+    <section className="py-24 bg-white border-b border-[#e5e5e2]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-12">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#155A9C]">
-            ENGINEERING EXCELLENCE
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B2341]">
+          <div className="eyebrow justify-center">
+            <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+            <span>ENGINEERING EXCELLENCE</span>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#1a1a18]">
             Why Industrial Plants Rely on Pacifluid
           </h2>
-          <p className="text-base text-[#667085]">
+          <p className="font-sans text-base text-[#666663] leading-relaxed">
             Built with 34+ years of precision manufacturing heritage by Shakti Engineers to withstand punishing 24/7 operating regimes.
           </p>
         </div>
@@ -48,15 +49,15 @@ export default function WhyPacifluid() {
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="bg-[#F7F8FA] rounded-2xl border border-[#E5E7EB] p-6 space-y-4 hover:border-[#155A9C]/40 hover:shadow-md transition-all duration-300"
+              className="card-modern p-6 space-y-4"
             >
-              <div className="w-12 h-12 rounded-xl bg-white border border-[#E5E7EB] flex items-center justify-center shadow-2xs">
+              <div className="w-12 h-12 rounded-2xl bg-[#fafaf9] border border-[#e5e5e2] flex items-center justify-center">
                 {p.icon}
               </div>
-              <h3 className="text-base font-bold text-[#0B2341]">
+              <h3 className="font-display text-base font-bold text-[#1a1a18]">
                 {p.title}
               </h3>
-              <p className="text-xs text-[#667085] leading-relaxed">
+              <p className="font-sans text-xs text-[#666663] leading-relaxed">
                 {p.desc}
               </p>
             </div>

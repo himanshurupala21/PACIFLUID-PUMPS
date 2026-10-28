@@ -1,9 +1,9 @@
 export const PRODUCTS = [
   {
     id: "gp-series",
-    name: "GP Series — External Rotary Twin Gear Pump",
+    name: "GP Series — External Rotary Gear Pump",
     category: "rotary-gear",
-    shortDesc: "Heavy-duty positive displacement twin gear pump engineered for lubricating oils, fuels, viscous liquids, and hydraulics.",
+    shortDesc: "Heavy-duty positive displacement gear pump engineered for lubricating oils, fuels, viscous liquids, and hydraulics.",
     image: "/assets/img/product/gp.png",
     realImage: "/img/ft.jpg",
     pdf: "/pdf/pacifluid-gp-gear-pump.pdf",
@@ -16,7 +16,7 @@ export const PRODUCTS = [
       viscosity: "10 to 10,000 cSt",
       temperature: "Up to 200°C (392°F)",
       portSize: '1/2" to 3" BSP / Flanged',
-      moc: "Graded Cast Iron FG-260, Cast Steel WCB, SS-304, SS-316",
+      moc: "Graded Cast Iron FG-260, Cast Steel WCB",
       sealing: "Gland Packing / Carbon-Ceramic Mechanical Seal",
       shaft: "EN-8 / EN-24 / SS-316 Ground & Hardened"
     },
@@ -35,7 +35,7 @@ export const PRODUCTS = [
   },
   {
     id: "gpss-series",
-    name: "GPSS Series — All Stainless Steel Rotary Gear Pump",
+    name: "GPSS Series — Stainless Steel Rotary Gear Pump",
     category: "stainless-steel",
     shortDesc: "100% Food, Pharma, and Chemical grade sanitary SS-316 / SS-304 rotary gear pump for corrosive and high-purity liquids.",
     image: "/assets/img/product/gpss.png",
@@ -102,42 +102,8 @@ export const PRODUCTS = [
     ]
   },
   {
-    id: "piga-series",
-    name: "PIGA Series — Internal Eccentric Gear Pump",
-    category: "internal-gear",
-    shortDesc: "Crescent internal gear pump designed for high-viscosity, shear-sensitive fluids with gentle low-shear pumping action.",
-    image: "/assets/img/product/piga.png",
-    realImage: "/img/fig.jpg",
-    pdf: "/pdf/pacifluid-piga-internal-gear-pump.pdf",
-    tag: "High Viscosity",
-    featured: true,
-    specs: {
-      capacity: "10 LPM to 450 LPM (0.6 to 27 m³/hr)",
-      pressure: "Up to 10 kg/cm² (10 Bar)",
-      speed: "450 to 960 RPM (Geared Motor Compatible)",
-      viscosity: "10 to 100,000 cSt",
-      temperature: "Up to 250°C (Jacketing options available)",
-      portSize: '1" to 4" Flanged ANSI B16.5',
-      moc: "Cast Iron / Ductile Iron / Cast Steel / Stainless Steel",
-      sealing: "Gland Packing / Heavy-duty Mechanical Seal",
-      shaft: "EN-19 / EN-24 / SS-316 with Tungsten Carbide Bushing"
-    },
-    features: [
-      "Unique internal rotor & idler with crescent partition for high viscous transfer",
-      "Optional steam jacketing casing to maintain liquid temperature (bitumen/wax)",
-      "Reversible flow capability with dual-direction shaft rotation",
-      "Low shear rate prevents degradation of shear-sensitive polymers and adhesives"
-    ],
-    applications: [
-      "Asphalt, bitumen, tar, and roofing emulsion plants",
-      "Paints, varnishes, resins, printing inks, and synthetic adhesives",
-      "Molasses, sugar syrup, and heavy bakery pastes",
-      "Polyurethane, silicone compounds, and polymer emulsions"
-    ]
-  },
-  {
     id: "pigb-series",
-    name: "PIGB Series — Fuel Injection Internal Gear Pump",
+    name: "PIGB Series — Fuel Injection Gear Pump (internal pump)",
     category: "internal-gear",
     shortDesc: "High-pressure positive displacement internal gear pump engineered for heavy fuel oil injection & burner firing.",
     image: "/assets/img/product/pigb.png",
@@ -168,47 +134,12 @@ export const PRODUCTS = [
       "Foundry furnaces, re-heating furnaces, and glass melting units",
       "Diesel generator fuel booster and day tank transfer stations"
     ]
-  },
-  {
-    id: "ft-special-series",
-    name: "FT / FTMS Heavy Industrial & Process Pump Series",
-    category: "industrial-heavy",
-    shortDesc: "Specialized process pumps including monoblock, bracket, and heavy reduction gear pump variants for severe duties.",
-    image: "/img/SERIES- FT.png",
-    realImage: "/img/FTBX-FTNX.jpg",
-    pdf: "/pdf/pacifluid-gp-gear-pump.pdf",
-    tag: "Engineered Process",
-    featured: false,
-    specs: {
-      capacity: "Up to 600 LPM",
-      pressure: "Up to 15 kg/cm²",
-      speed: "720 to 1440 RPM",
-      viscosity: "Up to 50,000 cSt",
-      temperature: "Up to 250°C",
-      portSize: '1" to 4" Screwed & Flanged',
-      moc: "CI / WCB / SS-316 / Hastelloy",
-      sealing: "Teflon / Cartridge Mechanical Seal",
-      shaft: "Heavy Alloy Steel / Hard Chrome Plated"
-    },
-    features: [
-      "Custom configured mounting: Foot mounted, Flange mounted, or Monoblock",
-      "Compatible with explosion-proof and flameproof electric motors",
-      "Jacketing chambers for hot steam / thermal fluid circulation",
-      "Overhung load capacity with heavy outboard spherical bearings"
-    ],
-    applications: [
-      "Paper and pulp mills for black liquor and starch pumping",
-      "Sugar refineries for heavy brix massecuite & molasses",
-      "Road construction asphalt batch plants and mobile sprayers",
-      "Petrochemical tank cleaning and sludge handling"
-    ]
   }
 ];
 
 export const CATEGORIES = [
   { id: "all", label: "All Pumps" },
-  { id: "rotary-gear", label: "External Rotary Twin Gear" },
+  { id: "rotary-gear", label: "External Rotary Gear" },
   { id: "stainless-steel", label: "Sanitary Stainless Steel" },
-  { id: "internal-gear", label: "Internal Eccentric Gear" },
-  { id: "industrial-heavy", label: "Heavy Industrial & Process" }
+  { id: "internal-gear", label: "Fuel Injection Gear Pump" }
 ];

@@ -35,34 +35,38 @@ export default function Navbar({ onOpenQuote }) {
   return (
     <>
       {/* Top Engineering Micro-Bar */}
-      <div className="bg-[#0B2341] text-white text-xs py-2 px-4 lg:px-8 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex justify-end items-center gap-2">
-          <div className="flex items-center gap-5 text-slate-300">
+      <div className="bg-[#141416] text-white text-xs py-2 px-4 lg:px-8 border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex justify-between items-center gap-2">
+          <div className="hidden md:flex items-center gap-2 text-white/60 font-display text-[11px] tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#e31e24] animate-pulse"></span>
+            <span>Heavy-Duty Positive Displacement Gear Pumps • India & Global Export</span>
+          </div>
+          <div className="flex items-center gap-5 text-white/80 font-sans ml-auto">
             <a 
               href={`tel:${COMPANY_INFO.phone}`} 
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-[#D71920]" />
-              <span>{COMPANY_INFO.phone}</span>
+              <Phone className="w-3.5 h-3.5 text-[#e31e24]" />
+              <span className="font-medium">{COMPANY_INFO.phone}</span>
             </a>
-            <span className="text-slate-600 hidden sm:inline">|</span>
+            <span className="text-white/20 hidden sm:inline">|</span>
             <a 
               href={`mailto:${COMPANY_INFO.email}`} 
               className="hidden sm:flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <Mail className="w-3.5 h-3.5 text-slate-400" />
+              <Mail className="w-3.5 h-3.5 text-white/50" />
               <span>{COMPANY_INFO.email}</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main White Sticky Header */}
+      {/* Main Sticky Header */}
       <header 
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled 
-            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#E5E7EB] py-3.5" 
-            : "bg-white border-b border-[#E5E7EB] py-4"
+            ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[#e5e5e2] py-3" 
+            : "bg-white border-b border-[#e5e5e2] py-3.5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between">
@@ -81,14 +85,14 @@ export default function Navbar({ onOpenQuote }) {
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             <Link 
               href="/" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Home
             </Link>
 
             <Link 
               href="/about" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               About
             </Link>
@@ -101,19 +105,19 @@ export default function Navbar({ onOpenQuote }) {
             >
               <Link
                 href="/products"
-                className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors flex items-center gap-1"
+                className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors flex items-center gap-1"
               >
                 <span>Products</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${productsDropdown ? "rotate-180 text-[#155A9C]" : "text-slate-400"}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${productsDropdown ? "rotate-180 text-[#e31e24]" : "text-stone-400"}`} />
               </Link>
 
               {productsDropdown && (
-                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-xl shadow-xl border border-[#E5E7EB] p-3 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="px-3 py-2 border-b border-[#E5E7EB] mb-2 flex justify-between items-center">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#155A9C]">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#e5e5e2] p-3 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="px-3 py-2 border-b border-[#e5e5e2] mb-2 flex justify-between items-center">
+                    <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#e31e24]">
                       Industrial Pump Catalog
                     </span>
-                    <Link href="/products" className="text-xs text-[#667085] hover:text-[#0B2341] flex items-center gap-1">
+                    <Link href="/products" className="text-xs font-display text-[#666663] hover:text-[#1a1a18] flex items-center gap-1">
                       View All <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
@@ -122,16 +126,16 @@ export default function Navbar({ onOpenQuote }) {
                       <Link
                         key={prod.id}
                         href={`/products/${prod.id}`}
-                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#F7F8FA] transition-colors group"
+                        className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#f7f7f6] transition-colors group"
                       >
-                        <div className="w-10 h-10 rounded bg-[#F1F4F7] p-1 flex items-center justify-center shrink-0 border border-[#E5E7EB]">
+                        <div className="w-10 h-10 rounded-lg bg-[#f7f7f6] p-1 flex items-center justify-center shrink-0 border border-[#e5e5e2]">
                           <img src={prod.image} alt={prod.name} className="max-h-full max-w-full object-contain" />
                         </div>
                         <div className="overflow-hidden">
-                          <p className="text-xs font-semibold text-[#0B2341] group-hover:text-[#155A9C] truncate">
+                          <p className="text-xs font-display font-semibold text-[#1a1a18] group-hover:text-[#e31e24] truncate">
                             {prod.name.split("—")[0]}
                           </p>
-                          <p className="text-[11px] text-[#667085] truncate">
+                          <p className="text-[11px] text-[#666663] truncate">
                             {prod.specs.capacity} • {prod.specs.pressure}
                           </p>
                         </div>
@@ -150,36 +154,36 @@ export default function Navbar({ onOpenQuote }) {
             >
               <Link
                 href="/applications"
-                className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors flex items-center gap-1"
+                className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors flex items-center gap-1"
               >
                 <span>Applications</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${appsDropdown ? "rotate-180 text-[#155A9C]" : "text-slate-400"}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${appsDropdown ? "rotate-180 text-[#e31e24]" : "text-stone-400"}`} />
               </Link>
 
               {appsDropdown && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-xl shadow-xl border border-[#E5E7EB] p-3 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="px-3 py-2 border-b border-[#E5E7EB] mb-2 flex justify-between items-center">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#155A9C]">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-[#e5e5e2] p-3 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="px-3 py-2 border-b border-[#e5e5e2] mb-2 flex justify-between items-center">
+                    <span className="text-[11px] font-display font-semibold uppercase tracking-wider text-[#e31e24]">
                       Process Solutions
                     </span>
-                    <Link href="/applications" className="text-xs text-[#667085] hover:text-[#0B2341] flex items-center gap-1">
+                    <Link href="/applications" className="text-xs font-display text-[#666663] hover:text-[#1a1a18] flex items-center gap-1">
                       Explore All <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
-                  <div className="space-y-1 text-xs">
-                    <Link href="/applications#boilers-burners" className="block px-3 py-2 rounded-lg hover:bg-[#F7F8FA] text-[#111827] hover:text-[#155A9C]">
+                  <div className="space-y-1 text-xs font-display">
+                    <Link href="/applications#boilers-burners" className="block px-3 py-2 rounded-xl hover:bg-[#f7f7f6] text-[#1a1a18] hover:text-[#e31e24] transition-colors">
                       Boilers, Burners & Heaters (FO / LDO)
                     </Link>
-                    <Link href="/applications#food-pharma" className="block px-3 py-2 rounded-lg hover:bg-[#F7F8FA] text-[#111827] hover:text-[#155A9C]">
+                    <Link href="/applications#food-pharma" className="block px-3 py-2 rounded-xl hover:bg-[#f7f7f6] text-[#1a1a18] hover:text-[#e31e24] transition-colors">
                       Food, Dairy & Pharmaceuticals (SS-316)
                     </Link>
-                    <Link href="/applications#refineries-petrochem" className="block px-3 py-2 rounded-lg hover:bg-[#F7F8FA] text-[#111827] hover:text-[#155A9C]">
+                    <Link href="/applications#refineries-petrochem" className="block px-3 py-2 rounded-xl hover:bg-[#f7f7f6] text-[#1a1a18] hover:text-[#e31e24] transition-colors">
                       Refineries & Petrochemicals
                     </Link>
-                    <Link href="/applications#road-construction" className="block px-3 py-2 rounded-lg hover:bg-[#F7F8FA] text-[#111827] hover:text-[#155A9C]">
+                    <Link href="/applications#road-construction" className="block px-3 py-2 rounded-xl hover:bg-[#f7f7f6] text-[#1a1a18] hover:text-[#e31e24] transition-colors">
                       Road Construction & Hot Bitumen
                     </Link>
-                    <Link href="/applications#sugar-paper" className="block px-3 py-2 rounded-lg hover:bg-[#F7F8FA] text-[#111827] hover:text-[#155A9C]">
+                    <Link href="/applications#sugar-paper" className="block px-3 py-2 rounded-xl hover:bg-[#f7f7f6] text-[#1a1a18] hover:text-[#e31e24] transition-colors">
                       Sugar Mills & Paper Refineries
                     </Link>
                   </div>
@@ -189,28 +193,28 @@ export default function Navbar({ onOpenQuote }) {
 
             <Link 
               href="/industries" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Industries
             </Link>
 
             <Link 
               href="/clients" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Clients
             </Link>
 
             <Link 
               href="/downloads" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Resources
             </Link>
 
             <Link 
               href="/contact" 
-              className="px-3 py-2 text-sm font-medium text-[#111827] hover:text-[#155A9C] rounded-md transition-colors"
+              className="px-3 py-2 text-sm font-display font-medium text-[#1a1a18] hover:text-[#e31e24] rounded-full transition-colors"
             >
               Contact
             </Link>
@@ -220,18 +224,18 @@ export default function Navbar({ onOpenQuote }) {
           <div className="hidden sm:flex items-center gap-3">
             <a 
               href={`tel:${COMPANY_INFO.phone}`} 
-              className="px-4 py-2 text-sm font-medium text-[#0B2341] border border-[#E5E7EB] hover:border-[#0B2341] hover:bg-[#F7F8FA] rounded-lg transition-all flex items-center gap-2"
+              className="btn btn-sm border border-[#e5e5e2] text-[#1a1a18] hover:border-[#1a1a18] bg-white transition-all flex items-center gap-2"
             >
-              <Phone className="w-3.5 h-3.5 text-[#155A9C]" />
+              <Phone className="w-3.5 h-3.5 text-[#e31e24]" />
               <span>Call Now</span>
             </a>
 
             <button 
               onClick={() => onOpenQuote && onOpenQuote()}
-              className="px-4 py-2 text-sm font-medium text-white bg-[#D71920] hover:bg-[#b8141a] rounded-lg shadow-sm hover:shadow transition-all flex items-center gap-2 active:scale-95"
+              className="btn btn-sm btn-red shadow-sm flex items-center gap-2 group cursor-pointer"
             >
               <span>Get a Quote</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
@@ -239,13 +243,13 @@ export default function Navbar({ onOpenQuote }) {
           <div className="flex sm:hidden items-center gap-2">
             <button 
               onClick={() => onOpenQuote && onOpenQuote()}
-              className="px-3 py-1.5 text-xs font-medium text-white bg-[#D71920] rounded-md"
+              className="btn btn-sm btn-red py-1 px-3 text-xs"
             >
               Quote
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-[#0B2341] hover:bg-[#F7F8FA] rounded-md border border-[#E5E7EB]"
+              className="p-2 text-[#1a1a18] hover:bg-[#f7f7f6] rounded-full border border-[#e5e5e2]"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

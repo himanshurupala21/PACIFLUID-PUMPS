@@ -4,7 +4,7 @@ export const INDUSTRIES = [
     name: "Chemical & Petrochemical",
     icon: "FlaskConical",
     description: "Pumping aggressive acids, alkalis, viscous polymers, and high-temperature hydrocarbons with zero leakage.",
-    pumps: "GP Series, GPSS (SS-316), PIGA Series",
+    pumps: "GP Series, GPSS (SS-316)",
     fluids: "Resins, solvents, crude distillates, caustic liquids"
   },
   {
@@ -28,7 +28,7 @@ export const INDUSTRIES = [
     name: "Road Construction & Bitumen",
     icon: "Truck",
     description: "Steam-jacketed positive displacement gear pumps engineered for asphalt batching and hot tar.",
-    pumps: "PIGA Series (Jacketed), FT Series",
+    pumps: "GP Series (Jacketed)",
     fluids: "VG-30/VG-40 bitumen, hot asphalt, road emulsions"
   },
   {
@@ -36,7 +36,7 @@ export const INDUSTRIES = [
     name: "Sugar Mills & Paper Refineries",
     icon: "Wheat",
     description: "High-torque reduction gear pumps engineered for fibrous, crystalizing, and high-Brix fluids.",
-    pumps: "PIGA Series, GP Series, FTMS Series",
+    pumps: "GP Series, GPSS Series",
     fluids: "Heavy molasses, massecuite, black liquor, starch sizing"
   },
   {
@@ -52,7 +52,7 @@ export const INDUSTRIES = [
     name: "Steel Plants & Heavy Engineering",
     icon: "Factory",
     description: "Heavy-duty 24/7 continuous circulation pumps for extreme temperature and severe duty cycles.",
-    pumps: "GP Series, PIGB Series, FT Series",
+    pumps: "GP Series, PIGB Series",
     fluids: "Turbine lubrication oil, gear drive coolants, quenching fluids"
   },
   {
@@ -60,7 +60,7 @@ export const INDUSTRIES = [
     name: "Paints, Inks & Synthetic Adhesives",
     icon: "Palette",
     description: "Low-shear transfer preserving molecular structure of adhesives, varnishes, and printing inks.",
-    pumps: "PIGA Series, GPSS Series",
+    pumps: "GP Series, GPSS Series",
     fluids: "Printing inks, alkyd resins, PVA glues, latex coatings"
   }
 ];

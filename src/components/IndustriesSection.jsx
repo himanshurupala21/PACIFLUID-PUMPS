@@ -27,46 +27,47 @@ export default function IndustriesSection() {
   };
 
   return (
-    <section className="py-24 bg-white border-b border-[#E5E7EB]">
+    <section className="py-24 bg-white border-b border-[#e5e5e2]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-12">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#155A9C]">
-            TARGET PROCESS SECTORS
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#0B2341]">
+          <div className="eyebrow justify-center">
+            <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+            <span>TARGET PROCESS SECTORS</span>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-[#1a1a18]">
             Industries We Serve
           </h2>
-          <p className="text-base text-[#667085]">
+          <p className="font-sans text-base text-[#666663] leading-relaxed">
             Supplying heavy duty B2B fluid solutions across India and international markets for continuous plant operations.
           </p>
         </div>
 
-        {/* Minimal White Cards Grid (Prompt Section 13 Requirement!) */}
+        {/* Minimal White Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {INDUSTRIES.map((ind) => (
             <div
               key={ind.id}
-              className="bg-white rounded-2xl border border-[#E5E7EB] hover:border-[#155A9C]/50 p-6 flex flex-col justify-between hover:shadow-md hover:-translate-y-1 transition-all duration-300 group"
+              className="card-modern p-6 flex flex-col justify-between group"
             >
               <div className="space-y-3">
-                <div className="w-10 h-10 rounded-xl bg-[#F1F4F7] flex items-center justify-center border border-[#E5E7EB] group-hover:scale-110 transition-transform">
-                  {iconMap[ind.icon] || <Cog className="w-5 h-5 text-[#155A9C]" />}
+                <div className="w-11 h-11 rounded-2xl bg-[#fafaf9] flex items-center justify-center border border-[#e5e5e2] group-hover:scale-105 group-hover:border-[#e31e24]/30 transition-all">
+                  {iconMap[ind.icon] || <Cog className="w-5 h-5 text-[#e31e24]" />}
                 </div>
 
-                <h3 className="text-base font-bold text-[#0B2341] group-hover:text-[#155A9C] transition-colors">
+                <h3 className="font-display text-base font-bold text-[#1a1a18] group-hover:text-[#e31e24] transition-colors">
                   {ind.name}
                 </h3>
 
-                <p className="text-xs text-[#667085] leading-relaxed">
+                <p className="font-sans text-xs text-[#666663] leading-relaxed">
                   {ind.description}
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-[#E5E7EB]">
-                <span className="text-[10px] text-[#667085] block mb-0.5">Recommended:</span>
-                <span className="text-[11px] font-semibold text-[#0B2341]">
+              <div className="mt-5 pt-3 border-t border-[#e5e5e2]">
+                <span className="text-[10px] text-[#666663] block mb-0.5 font-sans">Recommended:</span>
+                <span className="text-[11px] font-display font-semibold text-[#e31e24]">
                   {ind.pumps}
                 </span>
               </div>

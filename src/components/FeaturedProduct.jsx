@@ -20,7 +20,7 @@ export default function FeaturedProduct({ onOpenSpecs, onOpenQuote }) {
                 {/* Blueprint Dimension Markers */}
                 <div className="absolute top-3 left-4 text-[10px] font-mono text-[#667085] flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#155A9C]" />
-                  <span>CAD / ISO 9001:2015</span>
+                  <span>CAD / Precision Verified</span>
                 </div>
                 
                 <img

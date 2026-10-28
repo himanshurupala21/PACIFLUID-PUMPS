@@ -16,15 +16,16 @@ export default function IndustriesPage() {
 
       <main className="grow">
         {/* Page Hero */}
-        <section className="bg-[#F7F8FA] py-16 border-b border-[#E5E7EB]">
+        <section className="bg-[#fafaf9] py-16 border-b border-[#e5e5e2]">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#155A9C]">
-              B2B MANUFACTURING SECTORS
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0B2341] tracking-tight">
+            <div className="eyebrow">
+              <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+              <span>B2B MANUFACTURING SECTORS</span>
+            </div>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-[#1a1a18] tracking-tight">
               Process Industries Served
             </h1>
-            <p className="text-base text-[#667085] max-w-2xl leading-relaxed">
+            <p className="font-sans text-base text-[#666663] max-w-2xl leading-relaxed">
               Supplying positive displacement pumping systems designed to withstand demanding industrial regimes across power generation, chemical processing, food manufacturing, and heavy metallurgy.
             </p>
           </div>

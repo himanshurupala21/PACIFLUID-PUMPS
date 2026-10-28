@@ -25,16 +25,17 @@ export default function ProductsPage() {
 
       <main className="grow">
         {/* Page Hero */}
-        <section className="bg-[#F7F8FA] py-16 border-b border-[#E5E7EB]">
+        <section className="bg-[#fafaf9] py-16 border-b border-[#e5e5e2]">
           <div className="max-w-7xl mx-auto px-4 lg:px-8 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#155A9C]">
-              OFFICIAL PRODUCT CATALOG
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#0B2341] tracking-tight">
+            <div className="eyebrow">
+              <span className="w-2.5 h-1.5 rounded-full bg-[#e31e24]" />
+              <span>OFFICIAL PRODUCT CATALOG</span>
+            </div>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-[#1a1a18] tracking-tight">
               Industrial Pumping Solutions
             </h1>
-            <p className="text-base text-[#667085] max-w-2xl leading-relaxed">
-              Explore our complete range of precision positive displacement rotary twin gear pumps, sanitary stainless steel pumps, and high-pressure fuel injection gear pumps.
+            <p className="font-sans text-base text-[#666663] max-w-2xl leading-relaxed">
+              Explore our complete range of precision positive displacement rotary gear pumps, sanitary stainless steel pumps, and high-pressure fuel injection gear pumps.
             </p>
           </div>
         </section>
